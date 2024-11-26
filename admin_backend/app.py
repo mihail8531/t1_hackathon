@@ -15,7 +15,7 @@ async def lifespan(app: FastAPI):
     app.state.settings = settings
     yield
 
-app = FastAPI(debug=True)
+app = FastAPI(debug=True, lifespan=lifespan)
 app.include_router(files_uploader)
 # app.include_router(databases)
 
