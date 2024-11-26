@@ -1,0 +1,802 @@
+2024-11-27 04:03:38,208 INFO     21 task_executor_0 log path: /ragflow/logs/task_executor_0.log
+2024-11-27 04:03:41,355 INFO     21 init database on cluster mode successfully
+2024-11-27 04:03:49,021 INFO     21 generated new fontManager
+2024-11-27 04:03:57,104 INFO     21 Use Elasticsearch http://es01:9200 as the doc engine.
+2024-11-27 04:03:57,108 INFO     21 GET http://es01:9200/ [status:200 duration:0.003s]
+2024-11-27 04:03:57,109 INFO     21 HEAD http://es01:9200/ [status:200 duration:0.001s]
+2024-11-27 04:03:57,110 INFO     21 Elasticsearch http://es01:9200 is healthy.
+2024-11-27 04:03:57,112 WARNING  21 Load term.freq FAIL!
+2024-11-27 04:03:57,114 WARNING  21 Realtime synonym is disabled, since no redis connection.
+2024-11-27 04:03:57,117 WARNING  21 Load term.freq FAIL!
+2024-11-27 04:03:57,119 WARNING  21 Realtime synonym is disabled, since no redis connection.
+2024-11-27 04:03:57,226 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:03:57,226 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:03:57.226069", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:04:27,255 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:04:27,255 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:04:27.255287", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:04:57,284 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:04:57,284 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:04:57.283793", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:05:27,314 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:05:27,314 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:05:27.314463", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:05:57,345 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:05:57,345 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:05:57.345355", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:06:27,376 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:06:27,376 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:06:27.376108", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:06:57,403 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:06:57,404 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:06:57.403660", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:07:27,434 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:07:27,435 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:07:27.434448", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:07:57,465 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:07:57,465 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:07:57.465200", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:08:27,496 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:08:27,496 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:08:27.495868", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:08:57,525 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:08:57,525 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:08:57.524825", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:09:27,556 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:09:27,556 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:09:27.555726", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:09:57,586 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:09:57,586 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:09:57.585980", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:10:27,613 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:10:27,614 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:10:27.613631", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:10:57,642 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:10:57,643 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:10:57.642538", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:11:27,673 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:11:27,673 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:11:27.673086", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:11:57,703 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:11:57,704 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:11:57.703653", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:12:27,734 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:12:27,734 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:12:27.734402", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:12:57,748 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:12:57,748 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:12:57.748370", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:13:27,777 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:13:27,777 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:13:27.776960", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:13:57,807 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:13:57,807 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:13:57.806951", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:14:27,837 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:14:27,837 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:14:27.836951", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:14:57,867 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:14:57,867 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:14:57.866939", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:15:27,892 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:15:27,893 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:15:27.892776", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:15:57,920 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:15:57,920 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:15:57.920265", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:16:27,950 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:16:27,950 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:16:27.950263", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:16:57,979 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:16:57,979 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:16:57.978791", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:17:28,009 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:17:28,010 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:17:28.009509", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:17:58,040 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:17:58,040 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:17:58.040250", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:18:28,070 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:18:28,070 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:18:28.070256", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:18:58,100 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:18:58,100 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:18:58.100245", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:19:28,114 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:19:28,115 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:19:28.114538", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:19:58,145 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:19:58,145 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:19:58.145244", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:20:28,172 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:20:28,173 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:20:28.172710", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:20:58,203 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:20:58,204 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:20:58.203598", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:21:28,231 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:21:28,232 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:21:28.231491", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:21:58,238 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:21:58,238 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:21:58.238451", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:22:28,265 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:22:28,266 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:22:28.265513", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:22:58,294 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:22:58,295 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:22:58.294402", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:23:28,317 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:23:28,318 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:23:28.317695", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:23:58,347 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:23:58,347 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:23:58.346895", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:24:28,377 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:24:28,378 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:24:28.377523", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:24:58,407 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:24:58,407 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:24:58.406884", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:25:28,415 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:25:28,416 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:25:28.415672", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:25:58,443 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:25:58,444 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:25:58.443539", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:26:28,473 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:26:28,474 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:26:28.473533", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:26:58,503 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:26:58,503 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:26:58.503534", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:27:28,534 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:27:28,534 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:27:28.534124", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:27:58,563 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:27:58,563 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:27:58.563524", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:28:28,593 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:28:28,594 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:28:28.593525", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:28:58,623 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:28:58,624 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:28:58.623519", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:29:28,653 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:29:28,654 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:29:28.653519", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:29:58,684 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:29:58,684 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:29:58.683926", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:30:28,702 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:30:28,703 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:30:28.702609", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:30:58,733 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:30:58,733 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:30:58.733241", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:31:28,763 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:31:28,763 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:31:28.763503", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:31:58,793 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:31:58,794 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:31:58.793502", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:32:28,808 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:32:28,808 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:32:28.808432", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:32:58,839 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:32:58,839 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:32:58.839085", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:33:28,868 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:33:28,868 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:33:28.867928", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:33:58,898 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:33:58,899 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:33:58.898553", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:34:28,963 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:34:28,964 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:34:28.963779", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:34:58,993 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:34:58,993 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:34:58.993493", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:35:29,023 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:35:29,023 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:35:29.023480", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:35:59,053 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:35:59,054 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:35:59.053478", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:36:29,083 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:36:29,084 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:36:29.083478", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:36:59,105 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:36:59,105 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:36:59.105446", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:37:29,133 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:37:29,133 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:37:29.133467", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:37:59,163 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:37:59,163 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:37:59.163470", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:38:29,193 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:38:29,194 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:38:29.193593", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:38:59,223 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:38:59,224 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:38:59.223762", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:39:29,254 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:39:29,254 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:39:29.254494", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:39:59,278 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:39:59,278 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:39:59.278014", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:40:29,306 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:40:29,307 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:40:29.306784", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:40:59,320 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:40:59,320 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:40:59.320195", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:41:29,350 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:41:29,350 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:41:29.350119", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:41:59,358 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:41:59,358 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:41:59.357995", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:42:29,386 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:42:29,387 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:42:29.386772", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:42:59,416 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:42:59,417 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:42:59.416768", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:43:29,446 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:43:29,447 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:43:29.446766", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:43:59,476 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:43:59,477 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:43:59.476766", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:44:29,506 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:44:29,507 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:44:29.506761", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:44:59,536 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:44:59,537 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:44:59.536759", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:45:29,567 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:45:29,567 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:45:29.566759", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:45:59,596 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:45:59,597 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:45:59.596751", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:46:29,626 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:46:29,627 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:46:29.626751", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:46:59,656 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:46:59,657 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:46:59.656748", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:47:29,686 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:47:29,687 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:47:29.686746", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:47:59,716 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:47:59,717 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:47:59.716735", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:48:29,746 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:48:29,747 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:48:29.746740", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:48:59,776 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:48:59,777 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:48:59.776735", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:49:29,807 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:49:29,807 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:49:29.806730", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:49:59,836 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:49:59,837 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:49:59.836731", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:50:29,867 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:50:29,868 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:50:29.867490", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:50:59,896 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:50:59,897 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:50:59.896725", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:51:29,918 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:51:29,918 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:51:29.917994", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:51:59,946 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:51:59,947 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:51:59.946710", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:52:29,964 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:52:29,964 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:52:29.964035", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:52:59,993 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:52:59,993 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:52:59.993494", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:53:30,023 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:53:30,023 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:53:30.023373", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:54:00,038 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:54:00,038 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:54:00.038193", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:54:30,067 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:54:30,067 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:54:30.067165", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:55:00,096 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:55:00,097 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:55:00.096699", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:55:30,127 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:55:30,128 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:55:30.127474", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:56:00,157 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:56:00,158 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:56:00.157667", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:56:30,186 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:56:30,187 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:56:30.186692", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:57:00,199 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:57:00,200 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:57:00.199572", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:57:30,230 WARNING  21 RedisDB.queue_info rag_flow_svr_queue got exception: no such key
+2024-11-27 04:57:30,230 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:57:30.230014", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 0, "current": null}
+2024-11-27 04:57:48,110 INFO     21 handle_task begin for task {"id": "1763bbe8ac3911efa00b0242ac1f0006", "doc_id": "1596cc88ac3911efa2d60242ac1f0006", "from_page": 0, "to_page": 100000000, "retry_count": 0, "kb_id": "75316720ac3411efab8f0242ac1f0006", "parser_id": "naive", "parser_config": {"pages": [[1, 1000000]]}, "name": "text-corpus.csv", "type": "doc", "location": "text-corpus.csv", "size": 1276036, "tenant_id": "20efa844ac3311efaf180242ac1f0006", "language": "English", "embd_id": "text-embedding-3-small@OpenAI", "img2txt_id": "gpt-4-vision-preview@OpenAI", "asr_id": "whisper-1@OpenAI", "llm_id": "gpt-4o-mini@OpenAI", "update_time": 1732654667731}
+2024-11-27 04:57:48,150 INFO     21 From minio(0.017874955001389026) text-corpus.csv/text-corpus.csv
+2024-11-27 04:57:48,164 ERROR    21 Chunking text-corpus.csv/text-corpus.csv got exception
+Traceback (most recent call last):
+  File "/ragflow/rag/svr/task_executor.py", line 199, in build
+    cks = chunker.chunk(row["name"], binary=binary, from_page=row["from_page"],
+  File "/ragflow/rag/app/naive.py", line 276, in chunk
+    raise NotImplementedError(
+NotImplementedError: file type not supported yet(pdf, xlsx, doc, docx, txt supported)
+2024-11-27 04:57:48,164 ERROR    21 handle_task got exception for task {"id": "1763bbe8ac3911efa00b0242ac1f0006", "doc_id": "1596cc88ac3911efa2d60242ac1f0006", "from_page": 0, "to_page": 100000000, "retry_count": 0, "kb_id": "75316720ac3411efab8f0242ac1f0006", "parser_id": "naive", "parser_config": {"pages": [[1, 1000000]]}, "name": "text-corpus.csv", "type": "doc", "location": "text-corpus.csv", "size": 1276036, "tenant_id": "20efa844ac3311efaf180242ac1f0006", "language": "English", "embd_id": "text-embedding-3-small@OpenAI", "img2txt_id": "gpt-4-vision-preview@OpenAI", "asr_id": "whisper-1@OpenAI", "llm_id": "gpt-4o-mini@OpenAI", "update_time": 1732654667731}
+Traceback (most recent call last):
+  File "/ragflow/rag/svr/task_executor.py", line 448, in handle_task
+    do_handle_task(task)
+  File "/ragflow/rag/svr/task_executor.py", line 387, in do_handle_task
+    cks = build(r)
+  File "/ragflow/rag/svr/task_executor.py", line 199, in build
+    cks = chunker.chunk(row["name"], binary=binary, from_page=row["from_page"],
+  File "/ragflow/rag/app/naive.py", line 276, in chunk
+    raise NotImplementedError(
+NotImplementedError: file type not supported yet(pdf, xlsx, doc, docx, txt supported)
+2024-11-27 04:58:00,258 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:58:00.257707", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 1, "current": null}
+2024-11-27 04:58:30,287 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:58:30.286690", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 1, "current": null}
+2024-11-27 04:59:00,317 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:59:00.316669", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 1, "current": null}
+2024-11-27 04:59:30,347 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T04:59:30.346669", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 1, "current": null}
+2024-11-27 05:00:00,377 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:00:00.376666", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 1, "current": null}
+2024-11-27 05:00:30,407 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:00:30.406677", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 1, "current": null}
+2024-11-27 05:01:00,413 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:01:00.413344", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 1, "current": null}
+2024-11-27 05:01:30,443 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:01:30.443324", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 1, "current": null}
+2024-11-27 05:02:00,473 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:02:00.473325", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 1, "current": null}
+2024-11-27 05:02:30,503 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:02:30.503402", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 1, "current": null}
+2024-11-27 05:03:00,514 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:03:00.513891", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 1, "current": null}
+2024-11-27 05:03:30,543 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:03:30.543319", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 1, "current": null}
+2024-11-27 05:04:00,573 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:04:00.573320", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 1, "current": null}
+2024-11-27 05:04:30,603 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:04:30.603310", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 1, "current": null}
+2024-11-27 05:05:00,628 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:05:00.627861", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 1, "current": null}
+2024-11-27 05:05:30,657 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:05:30.657335", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 1, "current": null}
+2024-11-27 05:06:00,687 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:06:00.686635", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 1, "current": null}
+2024-11-27 05:06:30,696 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:06:30.696002", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 1, "current": null}
+2024-11-27 05:07:00,700 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:07:00.700070", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 1, "current": null}
+2024-11-27 05:07:30,731 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:07:30.730956", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 1, "current": null}
+2024-11-27 05:08:00,760 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:08:00.759955", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 0, "failed": 1, "current": null}
+2024-11-27 05:08:22,337 INFO     21 handle_task begin for task {"id": "91a3c424ac3a11ef900e0242ac1f0006", "doc_id": "8e9d5ac4ac3a11efaf150242ac1f0006", "from_page": 0, "to_page": 100000000, "retry_count": 0, "kb_id": "75316720ac3411efab8f0242ac1f0006", "parser_id": "naive", "parser_config": {"pages": [[1, 1000000]]}, "name": "text-corpus.txt", "type": "doc", "location": "text-corpus.txt", "size": 1253793, "tenant_id": "20efa844ac3311efaf180242ac1f0006", "language": "English", "embd_id": "text-embedding-3-small@OpenAI", "img2txt_id": "gpt-4-vision-preview@OpenAI", "asr_id": "whisper-1@OpenAI", "llm_id": "gpt-4o-mini@OpenAI", "update_time": 1732655302329}
+2024-11-27 05:08:22,363 INFO     21 From minio(0.004398029001094983) text-corpus.txt/text-corpus.txt
+2024-11-27 05:08:26,005 INFO     21 naive_merge(text-corpus.txt): 3.50510791600027
+2024-11-27 05:08:26,006 INFO     21 Chunking(3.647045928000807) text-corpus.txt/text-corpus.txt done
+2024-11-27 05:08:26,019 INFO     21 MINIO PUT(text-corpus.txt):0
+2024-11-27 05:08:26,019 INFO     21 Build chunks(text-corpus.txt): 3.6608361359994888
+2024-11-27 05:08:26,849 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:08:28,261 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:08:29,793 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:08:30,790 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:08:30.789950", "boot_at": "2024-11-27T04:03:57.104657", "pending": 1, "lag": 0, "done": 0, "failed": 1, "current": {"id": "91a3c424ac3a11ef900e0242ac1f0006", "doc_id": "8e9d5ac4ac3a11efaf150242ac1f0006", "from_page": 0, "to_page": 100000000, "retry_count": 0, "kb_id": "75316720ac3411efab8f0242ac1f0006", "parser_id": "naive", "parser_config": {"pages": [[1, 1000000]]}, "name": "text-corpus.txt", "type": "doc", "location": "text-corpus.txt", "size": 1253793, "tenant_id": "20efa844ac3311efaf180242ac1f0006", "language": "English", "embd_id": "text-embedding-3-small@OpenAI", "img2txt_id": "gpt-4-vision-preview@OpenAI", "asr_id": "whisper-1@OpenAI", "llm_id": "gpt-4o-mini@OpenAI", "update_time": 1732655302329}}
+2024-11-27 05:08:30,798 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:08:31,836 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:08:32,705 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:08:33,284 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:08:34,192 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:08:35,103 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:08:36,156 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:08:36,971 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:08:37,551 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:08:38,316 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:08:39,293 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:08:40,066 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:08:40,867 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:08:41,460 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:08:42,715 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:08:43,794 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:08:44,736 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:08:48,505 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:08:49,911 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:08:50,724 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:08:51,229 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:08:53,399 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:08:54,477 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:08:55,087 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:08:57,157 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:08:57,764 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:08:58,794 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:08:59,831 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:00,546 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:00,821 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:09:00.820722", "boot_at": "2024-11-27T04:03:57.104657", "pending": 1, "lag": 0, "done": 0, "failed": 1, "current": {"id": "91a3c424ac3a11ef900e0242ac1f0006", "doc_id": "8e9d5ac4ac3a11efaf150242ac1f0006", "from_page": 0, "to_page": 100000000, "retry_count": 0, "kb_id": "75316720ac3411efab8f0242ac1f0006", "parser_id": "naive", "parser_config": {"pages": [[1, 1000000]]}, "name": "text-corpus.txt", "type": "doc", "location": "text-corpus.txt", "size": 1253793, "tenant_id": "20efa844ac3311efaf180242ac1f0006", "language": "English", "embd_id": "text-embedding-3-small@OpenAI", "img2txt_id": "gpt-4-vision-preview@OpenAI", "asr_id": "whisper-1@OpenAI", "llm_id": "gpt-4o-mini@OpenAI", "update_time": 1732655302329}}
+2024-11-27 05:09:01,451 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:02,328 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:03,303 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:04,047 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:04,633 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:05,498 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:06,254 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:07,564 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:08,488 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:09,099 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:09,878 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:10,818 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:11,769 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:13,376 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:14,599 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:15,718 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:16,506 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:17,316 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:18,607 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:19,383 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:20,386 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:21,477 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:22,188 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:22,824 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:23,645 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:24,768 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:25,541 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:26,919 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:27,796 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:28,769 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:30,850 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:09:30.849954", "boot_at": "2024-11-27T04:03:57.104657", "pending": 1, "lag": 0, "done": 0, "failed": 1, "current": {"id": "91a3c424ac3a11ef900e0242ac1f0006", "doc_id": "8e9d5ac4ac3a11efaf150242ac1f0006", "from_page": 0, "to_page": 100000000, "retry_count": 0, "kb_id": "75316720ac3411efab8f0242ac1f0006", "parser_id": "naive", "parser_config": {"pages": [[1, 1000000]]}, "name": "text-corpus.txt", "type": "doc", "location": "text-corpus.txt", "size": 1253793, "tenant_id": "20efa844ac3311efaf180242ac1f0006", "language": "English", "embd_id": "text-embedding-3-small@OpenAI", "img2txt_id": "gpt-4-vision-preview@OpenAI", "asr_id": "whisper-1@OpenAI", "llm_id": "gpt-4o-mini@OpenAI", "update_time": 1732655302329}}
+2024-11-27 05:09:31,123 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:32,732 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:33,564 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:34,985 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:35,445 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:36,504 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:37,191 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:38,104 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:39,016 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:40,015 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:40,936 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:41,720 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:43,434 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:44,380 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:44,871 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:45,814 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:46,713 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:47,535 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:48,916 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:49,684 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:50,534 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:51,864 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:52,559 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:53,501 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:54,215 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:55,221 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:09:55,404 INFO     21 Embedding elapsed(text-corpus.txt): 89.36
+2024-11-27 05:09:55,414 INFO     21 HEAD http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006 [status:404 duration:0.002s]
+2024-11-27 05:09:55,711 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006 [status:200 duration:0.296s]
+2024-11-27 05:09:55,911 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.197s]
+2024-11-27 05:09:55,945 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.026s]
+2024-11-27 05:09:55,963 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.014s]
+2024-11-27 05:09:55,977 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.010s]
+2024-11-27 05:09:55,990 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.010s]
+2024-11-27 05:09:56,005 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.012s]
+2024-11-27 05:09:56,019 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.010s]
+2024-11-27 05:09:56,034 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.012s]
+2024-11-27 05:09:56,057 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.020s]
+2024-11-27 05:09:56,076 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.015s]
+2024-11-27 05:09:56,088 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.009s]
+2024-11-27 05:09:56,106 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.014s]
+2024-11-27 05:09:56,255 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.146s]
+2024-11-27 05:09:56,266 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.008s]
+2024-11-27 05:09:56,279 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.009s]
+2024-11-27 05:09:56,289 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.007s]
+2024-11-27 05:09:56,302 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.009s]
+2024-11-27 05:09:56,317 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.011s]
+2024-11-27 05:09:56,339 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.019s]
+2024-11-27 05:09:56,353 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.011s]
+2024-11-27 05:09:56,519 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.161s]
+2024-11-27 05:09:56,531 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.008s]
+2024-11-27 05:09:56,544 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.009s]
+2024-11-27 05:09:56,586 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.039s]
+2024-11-27 05:09:56,600 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.011s]
+2024-11-27 05:09:56,615 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.011s]
+2024-11-27 05:09:56,627 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.008s]
+2024-11-27 05:09:56,641 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.010s]
+2024-11-27 05:09:56,663 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.019s]
+2024-11-27 05:09:56,683 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.017s]
+2024-11-27 05:09:56,699 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.010s]
+2024-11-27 05:09:56,715 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.010s]
+2024-11-27 05:09:56,730 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.009s]
+2024-11-27 05:09:56,759 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.013s]
+2024-11-27 05:09:56,775 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.010s]
+2024-11-27 05:09:56,799 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.021s]
+2024-11-27 05:09:56,878 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.075s]
+2024-11-27 05:09:56,896 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.014s]
+2024-11-27 05:09:56,914 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.014s]
+2024-11-27 05:09:56,926 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.009s]
+2024-11-27 05:09:56,943 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.013s]
+2024-11-27 05:09:56,959 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.013s]
+2024-11-27 05:09:56,975 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.012s]
+2024-11-27 05:09:57,164 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.186s]
+2024-11-27 05:09:57,174 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:09:57,186 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.008s]
+2024-11-27 05:09:57,195 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:09:57,205 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.007s]
+2024-11-27 05:09:57,224 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.015s]
+2024-11-27 05:09:57,320 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.092s]
+2024-11-27 05:09:57,470 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.146s]
+2024-11-27 05:09:57,483 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.010s]
+2024-11-27 05:09:57,497 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.010s]
+2024-11-27 05:09:57,563 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.062s]
+2024-11-27 05:09:57,573 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:09:57,770 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.194s]
+2024-11-27 05:09:57,780 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:09:57,791 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:09:57,800 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:09:57,810 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.007s]
+2024-11-27 05:09:57,819 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:09:57,828 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:09:57,837 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:09:57,847 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:09:57,856 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:09:57,868 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:09:57,878 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:09:57,887 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:09:57,895 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:09:57,903 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:09:57,912 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:09:57,920 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:09:57,929 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:09:57,937 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:09:57,947 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:09:57,959 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:09:57,968 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:09:57,976 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:09:57,985 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:09:57,996 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.008s]
+2024-11-27 05:09:58,005 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:09:58,016 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.008s]
+2024-11-27 05:09:58,026 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:09:58,035 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:09:58,046 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:09:58,057 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.007s]
+2024-11-27 05:09:58,068 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.007s]
+2024-11-27 05:09:58,077 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:09:58,087 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:09:58,100 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.009s]
+2024-11-27 05:09:58,109 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:09:58,118 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:09:58,128 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:09:58,136 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:09:58,232 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.092s]
+2024-11-27 05:09:58,243 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.007s]
+2024-11-27 05:09:58,315 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.068s]
+2024-11-27 05:09:58,336 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.013s]
+2024-11-27 05:09:58,352 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.013s]
+2024-11-27 05:09:58,483 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.128s]
+2024-11-27 05:09:58,501 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.015s]
+2024-11-27 05:09:58,587 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.083s]
+2024-11-27 05:09:58,603 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.013s]
+2024-11-27 05:09:58,624 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.017s]
+2024-11-27 05:09:58,635 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.007s]
+2024-11-27 05:09:58,647 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.009s]
+2024-11-27 05:09:58,779 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.128s]
+2024-11-27 05:09:58,984 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.202s]
+2024-11-27 05:09:59,184 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.196s]
+2024-11-27 05:09:59,199 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.012s]
+2024-11-27 05:09:59,212 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.009s]
+2024-11-27 05:09:59,226 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.010s]
+2024-11-27 05:09:59,310 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.080s]
+2024-11-27 05:09:59,409 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.095s]
+2024-11-27 05:09:59,419 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:09:59,592 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.170s]
+2024-11-27 05:09:59,601 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:09:59,611 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:09:59,794 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.180s]
+2024-11-27 05:09:59,992 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.193s]
+2024-11-27 05:10:00,194 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.199s]
+2024-11-27 05:10:00,202 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:10:00,213 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.008s]
+2024-11-27 05:10:00,316 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.099s]
+2024-11-27 05:10:00,372 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.053s]
+2024-11-27 05:10:00,430 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.054s]
+2024-11-27 05:10:00,445 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.012s]
+2024-11-27 05:10:00,461 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.012s]
+2024-11-27 05:10:00,470 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:10:00,496 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.011s]
+2024-11-27 05:10:00,507 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.008s]
+2024-11-27 05:10:00,525 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.014s]
+2024-11-27 05:10:00,700 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.172s]
+2024-11-27 05:10:00,711 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.007s]
+2024-11-27 05:10:00,728 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.014s]
+2024-11-27 05:10:00,880 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:10:00.879945", "boot_at": "2024-11-27T04:03:57.104657", "pending": 1, "lag": 0, "done": 0, "failed": 1, "current": {"id": "91a3c424ac3a11ef900e0242ac1f0006", "doc_id": "8e9d5ac4ac3a11efaf150242ac1f0006", "from_page": 0, "to_page": 100000000, "retry_count": 0, "kb_id": "75316720ac3411efab8f0242ac1f0006", "parser_id": "naive", "parser_config": {"pages": [[1, 1000000]]}, "name": "text-corpus.txt", "type": "doc", "location": "text-corpus.txt", "size": 1253793, "tenant_id": "20efa844ac3311efaf180242ac1f0006", "language": "English", "embd_id": "text-embedding-3-small@OpenAI", "img2txt_id": "gpt-4-vision-preview@OpenAI", "asr_id": "whisper-1@OpenAI", "llm_id": "gpt-4o-mini@OpenAI", "update_time": 1732655302329}}
+2024-11-27 05:10:00,908 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.176s]
+2024-11-27 05:10:01,007 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.095s]
+2024-11-27 05:10:01,204 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.194s]
+2024-11-27 05:10:01,282 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.074s]
+2024-11-27 05:10:01,295 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.010s]
+2024-11-27 05:10:01,314 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.015s]
+2024-11-27 05:10:01,326 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.008s]
+2024-11-27 05:10:01,336 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:10:01,351 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.012s]
+2024-11-27 05:10:01,431 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.076s]
+2024-11-27 05:10:01,441 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.007s]
+2024-11-27 05:10:01,454 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.009s]
+2024-11-27 05:10:01,609 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.152s]
+2024-11-27 05:10:01,617 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.004s]
+2024-11-27 05:10:01,625 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:10:01,814 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.186s]
+2024-11-27 05:10:01,826 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.007s]
+2024-11-27 05:10:01,983 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.154s]
+2024-11-27 05:10:02,105 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.119s]
+2024-11-27 05:10:02,114 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:10:02,129 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.012s]
+2024-11-27 05:10:02,148 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.016s]
+2024-11-27 05:10:02,169 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.018s]
+2024-11-27 05:10:02,202 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.030s]
+2024-11-27 05:10:02,217 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.012s]
+2024-11-27 05:10:02,233 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.012s]
+2024-11-27 05:10:02,256 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.013s]
+2024-11-27 05:10:02,284 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.023s]
+2024-11-27 05:10:02,314 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.027s]
+2024-11-27 05:10:02,332 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.014s]
+2024-11-27 05:10:02,345 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.009s]
+2024-11-27 05:10:02,362 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.014s]
+2024-11-27 05:10:02,421 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.055s]
+2024-11-27 05:10:02,431 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:10:02,447 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.012s]
+2024-11-27 05:10:02,464 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.013s]
+2024-11-27 05:10:02,473 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:10:02,482 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:10:02,491 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:10:02,499 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:10:02,535 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.032s]
+2024-11-27 05:10:02,577 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.039s]
+2024-11-27 05:10:02,586 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:10:02,611 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.021s]
+2024-11-27 05:10:02,652 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.038s]
+2024-11-27 05:10:02,661 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:10:02,669 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:10:02,682 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.010s]
+2024-11-27 05:10:02,697 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.012s]
+2024-11-27 05:10:02,705 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:10:02,714 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:10:02,730 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.013s]
+2024-11-27 05:10:02,739 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:10:02,749 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:10:02,759 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.007s]
+2024-11-27 05:10:02,770 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.008s]
+2024-11-27 05:10:02,786 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.011s]
+2024-11-27 05:10:02,806 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.016s]
+2024-11-27 05:10:02,831 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.011s]
+2024-11-27 05:10:02,867 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.032s]
+2024-11-27 05:10:02,883 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.013s]
+2024-11-27 05:10:02,924 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.038s]
+2024-11-27 05:10:02,937 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.009s]
+2024-11-27 05:10:02,968 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.027s]
+2024-11-27 05:10:02,978 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:10:02,991 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.009s]
+2024-11-27 05:10:03,035 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.041s]
+2024-11-27 05:10:03,047 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.007s]
+2024-11-27 05:10:03,056 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:10:03,066 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.007s]
+2024-11-27 05:10:03,076 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:10:03,086 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.007s]
+2024-11-27 05:10:03,138 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.048s]
+2024-11-27 05:10:03,229 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.087s]
+2024-11-27 05:10:03,246 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.014s]
+2024-11-27 05:10:03,254 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:10:03,264 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:10:03,276 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.007s]
+2024-11-27 05:10:03,287 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.008s]
+2024-11-27 05:10:03,309 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.019s]
+2024-11-27 05:10:03,318 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:10:03,325 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.004s]
+2024-11-27 05:10:03,333 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.004s]
+2024-11-27 05:10:03,342 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:10:03,349 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.004s]
+2024-11-27 05:10:03,357 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:10:03,365 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.004s]
+2024-11-27 05:10:03,373 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.004s]
+2024-11-27 05:10:03,381 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.004s]
+2024-11-27 05:10:03,391 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:10:03,404 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:10:03,412 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.004s]
+2024-11-27 05:10:03,420 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.004s]
+2024-11-27 05:10:03,428 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.004s]
+2024-11-27 05:10:03,630 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.199s]
+2024-11-27 05:10:03,644 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.010s]
+2024-11-27 05:10:03,829 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.182s]
+2024-11-27 05:10:04,036 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.203s]
+2024-11-27 05:10:04,051 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.011s]
+2024-11-27 05:10:04,116 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.062s]
+2024-11-27 05:10:04,127 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.007s]
+2024-11-27 05:10:04,140 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.009s]
+2024-11-27 05:10:04,154 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.011s]
+2024-11-27 05:10:04,168 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.010s]
+2024-11-27 05:10:04,177 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:10:04,194 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.013s]
+2024-11-27 05:10:04,205 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.008s]
+2024-11-27 05:10:04,218 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.008s]
+2024-11-27 05:10:04,227 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:10:04,237 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:10:04,245 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:10:04,266 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.017s]
+2024-11-27 05:10:04,276 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:10:04,285 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:10:04,293 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:10:04,301 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:10:04,309 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.004s]
+2024-11-27 05:10:04,319 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:10:04,334 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.012s]
+2024-11-27 05:10:04,344 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:10:04,353 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:10:04,368 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.012s]
+2024-11-27 05:10:04,388 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:10:04,396 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.004s]
+2024-11-27 05:10:04,411 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.012s]
+2024-11-27 05:10:04,422 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.008s]
+2024-11-27 05:10:04,541 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.116s]
+2024-11-27 05:10:04,561 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.015s]
+2024-11-27 05:10:04,574 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.008s]
+2024-11-27 05:10:04,745 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.167s]
+2024-11-27 05:10:04,943 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.195s]
+2024-11-27 05:10:04,959 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.012s]
+2024-11-27 05:10:05,143 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.180s]
+2024-11-27 05:10:05,152 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:10:05,160 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:10:05,167 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.004s]
+2024-11-27 05:10:05,182 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.011s]
+2024-11-27 05:10:05,315 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.130s]
+2024-11-27 05:10:05,323 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:10:05,333 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.007s]
+2024-11-27 05:10:05,341 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.004s]
+2024-11-27 05:10:05,348 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.004s]
+2024-11-27 05:10:05,356 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.004s]
+2024-11-27 05:10:05,364 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.004s]
+2024-11-27 05:10:05,372 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:10:05,380 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.004s]
+2024-11-27 05:10:05,387 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.004s]
+2024-11-27 05:10:05,484 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.094s]
+2024-11-27 05:10:05,494 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:10:05,505 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.007s]
+2024-11-27 05:10:05,650 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.141s]
+2024-11-27 05:10:05,680 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.027s]
+2024-11-27 05:10:05,853 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.169s]
+2024-11-27 05:10:06,017 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.160s]
+2024-11-27 05:10:06,121 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.087s]
+2024-11-27 05:10:06,130 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.004s]
+2024-11-27 05:10:06,146 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.012s]
+2024-11-27 05:10:06,166 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.017s]
+2024-11-27 05:10:06,174 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.004s]
+2024-11-27 05:10:06,190 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.012s]
+2024-11-27 05:10:06,310 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.117s]
+2024-11-27 05:10:06,324 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.010s]
+2024-11-27 05:10:06,456 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.128s]
+2024-11-27 05:10:06,466 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:10:06,511 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.042s]
+2024-11-27 05:10:06,555 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.041s]
+2024-11-27 05:10:06,571 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.013s]
+2024-11-27 05:10:06,580 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:10:06,599 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.015s]
+2024-11-27 05:10:06,618 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.016s]
+2024-11-27 05:10:06,632 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.010s]
+2024-11-27 05:10:06,659 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.024s]
+2024-11-27 05:10:06,670 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.007s]
+2024-11-27 05:10:06,860 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.185s]
+2024-11-27 05:10:06,868 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.005s]
+2024-11-27 05:10:06,875 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.004s]
+2024-11-27 05:10:07,067 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.188s]
+2024-11-27 05:10:07,085 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.014s]
+2024-11-27 05:10:07,100 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.012s]
+2024-11-27 05:10:07,265 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.161s]
+2024-11-27 05:10:07,278 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.010s]
+2024-11-27 05:10:07,294 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.013s]
+2024-11-27 05:10:07,305 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.007s]
+2024-11-27 05:10:07,471 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.163s]
+2024-11-27 05:10:07,532 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.057s]
+2024-11-27 05:10:07,550 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.014s]
+2024-11-27 05:10:07,604 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.047s]
+2024-11-27 05:10:07,618 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.010s]
+2024-11-27 05:10:07,685 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.063s]
+2024-11-27 05:10:07,695 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:10:07,713 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.014s]
+2024-11-27 05:10:07,734 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.017s]
+2024-11-27 05:10:07,771 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.033s]
+2024-11-27 05:10:07,782 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.008s]
+2024-11-27 05:10:07,797 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.011s]
+2024-11-27 05:10:07,814 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.013s]
+2024-11-27 05:10:07,829 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.011s]
+2024-11-27 05:10:07,840 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.008s]
+2024-11-27 05:10:07,850 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:10:07,859 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:10:07,868 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:10:07,878 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.007s]
+2024-11-27 05:10:07,915 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.033s]
+2024-11-27 05:10:07,941 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.022s]
+2024-11-27 05:10:07,952 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:10:07,968 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.013s]
+2024-11-27 05:10:07,979 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.007s]
+2024-11-27 05:10:07,989 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.007s]
+2024-11-27 05:10:08,020 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.028s]
+2024-11-27 05:10:08,031 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:10:08,043 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.006s]
+2024-11-27 05:10:08,054 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.007s]
+2024-11-27 05:10:08,080 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.022s]
+2024-11-27 05:10:08,100 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.016s]
+2024-11-27 05:10:08,115 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.009s]
+2024-11-27 05:10:08,128 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.012s]
+2024-11-27 05:10:08,129 INFO     21 Indexing elapsed(text-corpus.txt): 12.42
+2024-11-27 05:10:08,182 INFO     21 Chunk doc(91a3c424ac3a11ef900e0242ac1f0006), token(278478), chunks(1401), elapsed:12.47
+2024-11-27 05:10:08,205 INFO     21 handle_task done for task {"id": "91a3c424ac3a11ef900e0242ac1f0006", "doc_id": "8e9d5ac4ac3a11efaf150242ac1f0006", "from_page": 0, "to_page": 100000000, "retry_count": 0, "kb_id": "75316720ac3411efab8f0242ac1f0006", "parser_id": "naive", "parser_config": {"pages": [[1, 1000000]]}, "name": "text-corpus.txt", "type": "doc", "location": "text-corpus.txt", "size": 1253793, "tenant_id": "20efa844ac3311efaf180242ac1f0006", "language": "English", "embd_id": "text-embedding-3-small@OpenAI", "img2txt_id": "gpt-4-vision-preview@OpenAI", "asr_id": "whisper-1@OpenAI", "llm_id": "gpt-4o-mini@OpenAI", "update_time": 1732655302329}
+2024-11-27 05:10:30,891 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:10:30.891266", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 1, "failed": 1, "current": null}
+2024-11-27 05:11:00,905 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:11:00.905597", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 1, "failed": 1, "current": null}
+2024-11-27 05:11:30,933 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:11:30.933600", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 1, "failed": 1, "current": null}
+2024-11-27 05:12:00,963 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:12:00.963276", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 1, "failed": 1, "current": null}
+2024-11-27 05:12:30,993 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:12:30.993259", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 1, "failed": 1, "current": null}
+2024-11-27 05:13:01,023 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:13:01.023259", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 1, "failed": 1, "current": null}
+2024-11-27 05:13:31,045 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:13:31.045302", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 1, "failed": 1, "current": null}
+2024-11-27 05:14:01,076 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:14:01.076224", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 1, "failed": 1, "current": null}
+2024-11-27 05:14:31,107 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:14:31.106577", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 1, "failed": 1, "current": null}
+2024-11-27 05:15:01,136 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:15:01.136578", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 1, "failed": 1, "current": null}
+2024-11-27 05:15:31,166 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:15:31.166569", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 1, "failed": 1, "current": null}
+2024-11-27 05:16:01,196 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:16:01.196570", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 1, "failed": 1, "current": null}
+2024-11-27 05:16:30,495 INFO     21 handle_task begin for task {"id": "b49a66daac3b11efa9360242ac1f0006", "doc_id": "b3905894ac3b11ef90980242ac1f0006", "from_page": 0, "to_page": 100000000, "retry_count": 0, "kb_id": "75316720ac3411efab8f0242ac1f0006", "parser_id": "naive", "parser_config": {"pages": [[1, 1000000]]}, "name": "custom.txt", "type": "doc", "location": "custom.txt", "size": 72, "tenant_id": "20efa844ac3311efaf180242ac1f0006", "language": "English", "embd_id": "text-embedding-3-small@OpenAI", "img2txt_id": "gpt-4-vision-preview@OpenAI", "asr_id": "whisper-1@OpenAI", "llm_id": "gpt-4o-mini@OpenAI", "update_time": 1732655790485}
+2024-11-27 05:16:30,522 INFO     21 From minio(0.0033956210008909693) custom.txt/custom.txt
+2024-11-27 05:16:30,540 INFO     21 naive_merge(custom.txt): 0.0002750509993347805
+2024-11-27 05:16:30,540 INFO     21 Chunking(0.021536145999561995) custom.txt/custom.txt done
+2024-11-27 05:16:30,540 INFO     21 MINIO PUT(custom.txt):0
+2024-11-27 05:16:30,540 INFO     21 Build chunks(custom.txt): 0.021678544999303995
+2024-11-27 05:16:30,888 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:16:31,227 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:16:31.226574", "boot_at": "2024-11-27T04:03:57.104657", "pending": 1, "lag": 0, "done": 1, "failed": 1, "current": {"id": "b49a66daac3b11efa9360242ac1f0006", "doc_id": "b3905894ac3b11ef90980242ac1f0006", "from_page": 0, "to_page": 100000000, "retry_count": 0, "kb_id": "75316720ac3411efab8f0242ac1f0006", "parser_id": "naive", "parser_config": {"pages": [[1, 1000000]]}, "name": "custom.txt", "type": "doc", "location": "custom.txt", "size": 72, "tenant_id": "20efa844ac3311efaf180242ac1f0006", "language": "English", "embd_id": "text-embedding-3-small@OpenAI", "img2txt_id": "gpt-4-vision-preview@OpenAI", "asr_id": "whisper-1@OpenAI", "llm_id": "gpt-4o-mini@OpenAI", "update_time": 1732655790485}}
+2024-11-27 05:16:31,274 INFO     21 HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-27 05:16:31,328 INFO     21 Embedding elapsed(custom.txt): 0.78
+2024-11-27 05:16:31,338 INFO     21 HEAD http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006 [status:200 duration:0.001s]
+2024-11-27 05:16:31,351 INFO     21 PUT http://es01:9200/ragflow_20efa844ac3311efaf180242ac1f0006/_bulk?refresh=false&timeout=60s [status:200 duration:0.012s]
+2024-11-27 05:16:31,361 INFO     21 Indexing elapsed(custom.txt): 0.02
+2024-11-27 05:16:31,392 INFO     21 Chunk doc(b49a66daac3b11efa9360242ac1f0006), token(22), chunks(1), elapsed:0.05
+2024-11-27 05:16:31,392 INFO     21 handle_task done for task {"id": "b49a66daac3b11efa9360242ac1f0006", "doc_id": "b3905894ac3b11ef90980242ac1f0006", "from_page": 0, "to_page": 100000000, "retry_count": 0, "kb_id": "75316720ac3411efab8f0242ac1f0006", "parser_id": "naive", "parser_config": {"pages": [[1, 1000000]]}, "name": "custom.txt", "type": "doc", "location": "custom.txt", "size": 72, "tenant_id": "20efa844ac3311efaf180242ac1f0006", "language": "English", "embd_id": "text-embedding-3-small@OpenAI", "img2txt_id": "gpt-4-vision-preview@OpenAI", "asr_id": "whisper-1@OpenAI", "llm_id": "gpt-4o-mini@OpenAI", "update_time": 1732655790485}
+2024-11-27 05:17:01,257 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:17:01.257347", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:17:31,286 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:17:31.286574", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:18:01,316 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:18:01.316555", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:18:31,346 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:18:31.346556", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:19:01,357 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:19:01.356798", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:19:31,387 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:19:31.386561", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:20:01,417 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:20:01.417561", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:20:31,448 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:20:31.448321", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:21:01,479 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:21:01.479073", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:21:31,510 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:21:31.509898", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:22:01,540 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:22:01.539870", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:22:31,571 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:22:31.570822", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:23:01,601 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:23:01.601613", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:23:31,630 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:23:31.629865", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:24:01,653 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:24:01.653217", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:24:31,683 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:24:31.683188", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:25:01,714 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:25:01.713894", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:25:31,732 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:25:31.732365", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:26:01,763 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:26:01.763173", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:26:31,766 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:26:31.766438", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:27:01,797 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:27:01.797107", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:27:31,828 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:27:31.827797", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:28:01,859 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:28:01.858665", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:28:31,890 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:28:31.889668", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:29:01,920 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:29:01.920416", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:29:31,951 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:29:31.951139", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:30:01,982 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:30:01.981820", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:30:31,994 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:30:31.993677", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:31:01,997 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:31:01.996607", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:31:32,027 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:31:32.027554", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:32:02,056 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:32:02.056478", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:32:32,087 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:32:32.087142", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:33:02,116 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:33:02.116468", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:33:32,146 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:33:32.146468", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:34:02,176 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:34:02.176459", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:34:32,206 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:34:32.206463", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:35:02,237 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:35:02.236698", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:35:32,265 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:35:32.264869", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:36:02,293 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:36:02.293120", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:36:32,323 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:36:32.323125", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:37:02,353 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:37:02.353115", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:37:32,383 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:37:32.383110", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:38:02,413 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:38:02.413112", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:38:32,443 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:38:32.443103", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:39:02,473 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:39:02.473099", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:39:32,503 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:39:32.503100", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:40:02,533 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:40:02.533094", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:40:32,563 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:40:32.563097", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:41:02,593 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:41:02.593085", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:41:32,623 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:41:32.623086", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:42:02,653 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:42:02.653080", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
+2024-11-27 05:42:32,684 INFO     21 task_consumer_0 reported heartbeat: {"name": "task_consumer_0", "now": "2024-11-27T05:42:32.683823", "boot_at": "2024-11-27T04:03:57.104657", "pending": 0, "lag": 0, "done": 2, "failed": 1, "current": null}
