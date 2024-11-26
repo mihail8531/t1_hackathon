@@ -9,3 +9,4 @@ class SqlQuery(BaseModel):
     db_port: str
     db_user: str
     db_user_passwd: str
+    limit: int = Field(gt=, lt=10)

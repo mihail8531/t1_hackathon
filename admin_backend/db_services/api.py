@@ -29,7 +29,7 @@ async def lookup_data_using_sql(query: SqlQuery = Depends(SqlQuery)) -> Response
         return Response(cnt, status_code=http.HTTPStatus.UNPROCESSABLE_ENTITY)
 
     try:
-        data = repo.load()
+        data = repo.load(query.query, records_limit=query.limit)
     except ApplicationError as err:
         return Response(status_code=http.HTTPStatus.INTERNAL_SERVER_ERROR)
     return Response(data, status_code=http.HTTPStatus.ACCEPTED)
@@ -56,7 +56,7 @@ async def upload_data_using_sql(query: SqlQuery = Depends(SqlQuery)) -> Response
         return Response(cnt, status_code=http.HTTPStatus.UNPROCESSABLE_ENTITY)
 
     try:
-        data = repo.load()
+        data = repo.load(query.query, records_limit=query.limit)
         # send data by API into RAG
     except ApplicationError as err:
         return Response(status_code=http.HTTPStatus.INTERNAL_SERVER_ERROR)
