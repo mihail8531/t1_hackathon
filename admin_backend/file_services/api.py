@@ -1,13 +1,12 @@
-from fastapi import APIRouter
+import http
+
+from fastapi import APIRouter, UploadFile, File
 from fastapi import Response
 
 
-files_uploader = APIRouter(prefix="/api/v1/files")
+files_uploader = APIRouter(prefix="/api/v1/documents")
 
 
-@files_uploader.post("/pdf/new")
-async def upload_new_pdf() -> Response: pass
-
-
-@files_uploader.post("/csv/new")
-async def upload_new_csv() -> Response: pass
+@files_uploader.post("/new")
+async def upload_new_pdf(pdf_file: UploadFile = File(...)) -> Response:
+    return Response(status_code=http.HTTPStatus.ACCEPTED)
