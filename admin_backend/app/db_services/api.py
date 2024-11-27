@@ -24,7 +24,9 @@ rag = Settings()
 async def lookup_data_using_sql(query: SqlQuery) -> JSONResponse:
     db_provider = query.db_provider.lower()
     if db_provider not in POSSIBLE_DB_PROVIDERS:
-        return JSONResponse(status_code=http.HTTPStatus.UNPROCESSABLE_ENTITY)
+        return JSONResponse(
+            {"error": 422}, status_code=http.HTTPStatus.UNPROCESSABLE_ENTITY
+        )
 
     dsn = (
         f"{query.db_provider}://{query.db_user}:{query.db_user_passwd}"
@@ -32,7 +34,9 @@ async def lookup_data_using_sql(query: SqlQuery) -> JSONResponse:
     )
     repo = PostgresqlRepository(dsn, app_logger)
     if not repo.query_is_readonly(query.query):
-        return JSONResponse(status_code=http.HTTPStatus.UNPROCESSABLE_ENTITY)
+        return JSONResponse(
+            {"error": 422}, status_code=http.HTTPStatus.UNPROCESSABLE_ENTITY
+        )
 
     try:
         data = await repo.load(query.query, records_limit=query.limit)
@@ -119,7 +123,7 @@ async def upload_data_using_sql(query: SqlQuery) -> JSONResponse:
         ds = flow.list_datasets(id=query.dataset_id)
         if len(ds) == 0:
             app_logger.error(f"{__name__}: dataset {query.dataset_id} not found")
-            return JSONResponse(status_code=http.HTTPStatus.NOT_FOUND)
+            return JSONResponse({"error": 404}, status_code=http.HTTPStatus.NOT_FOUND)
         ds[0].upload_documents(_data)
         rsp = {"dataset_id": ds[0].id}
         return JSONResponse(rsp)

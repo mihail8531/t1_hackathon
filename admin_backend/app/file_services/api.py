@@ -74,7 +74,7 @@ async def upload_new_file(
         ds = flow.list_datasets(id=dataset_id)
         if len(ds) == 0:
             app_logger.error(f"{__name__}: dataset {dataset_id} not found")
-            return JSONResponse(status_code=http.HTTPStatus.NOT_FOUND)
+            return JSONResponse({"error": 500}, status_code=http.HTTPStatus.NOT_FOUND)
         ds[0].upload_documents(_data)
         rsp = {"dataset_id": ds[0].id}
         return JSONResponse(rsp)
