@@ -11,6 +11,7 @@ from app.settings import Settings
 from app.site_services.api import sites
 from app.config.config import app_logger
 from app.auth.services import get_rag_api_token
+from app.auth.api import auth
 
 
 @asynccontextmanager
@@ -32,6 +33,7 @@ def create_app() -> FastAPI:
     app.include_router(datasets)
     app.include_router(assistant_windows)
     app.include_router(sites)
+    app.include_router(auth)
     app.exception_handler(NotFoundError)(not_found_exception_handler)
 
     return app
