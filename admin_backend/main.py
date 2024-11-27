@@ -5,7 +5,6 @@ from app.exceptions.exceptions import NotFoundError, ApplicationError
 from app.exceptions.handlers import not_found_exception_handler
 from app.file_services.api import files_uploader
 from app.db_services.api import databases
-from app.datasets.api import datasets
 from app.assistant_window.api import assistant_windows
 from app.settings import Settings
 from app.site_services.api import sites
@@ -29,7 +28,6 @@ def create_app() -> FastAPI:
     app = FastAPI(debug=True, lifespan=lifespan)
     app.include_router(files_uploader)
     app.include_router(databases)
-    app.include_router(datasets)
     app.include_router(assistant_windows)
     app.include_router(sites)
     app.exception_handler(NotFoundError)(not_found_exception_handler)
