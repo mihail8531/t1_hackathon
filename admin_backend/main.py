@@ -18,8 +18,7 @@ from app.auth.api import auth
 async def lifespan(app: FastAPI):
     settings = Settings(_env_file=".env")  # type: ignore[call-arg]
     try:
-        api_key = await get_rag_api_token()
-        settings.RAGFLOW_API_KEY = api_key
+        settings.RAGFLOW_API_KEY, settings.RAGFLOW_AUTH_KEY = await get_rag_api_token()
     except ApplicationError as err:
         await app_logger.error(f"{__name__}: failed to fetch RAG API token\n({err})")
     app.state.settings = settings

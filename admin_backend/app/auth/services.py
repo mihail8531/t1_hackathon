@@ -26,7 +26,7 @@ def encrypt(passwd: str, pub: str) -> str:
     return encrypted_base64
 
 
-async def get_rag_api_token(*, timeout: float = 10.0) -> str:
+async def get_rag_api_token(*, timeout: float = 10.0) -> tuple[str, str]:
     data: Optional[UserCredentials] = None
     try:
         encrypted_pass = encrypt(auth_settings.APP_PASSWD, RAG_API_PUBLIC_KEY)
@@ -101,7 +101,7 @@ async def get_rag_api_token(*, timeout: float = 10.0) -> str:
         try:
             response_data = resp.json()
             await app_logger.debug(f"{__name__}: token response {response_data}")
-            return response_data["data"]["token"]
+            return (response_data["data"]["token"], auth_header)
         except Exception as err:
             await app_logger.error(f"{__name__}: {err}")
             raise ApplicationError("serialization error")

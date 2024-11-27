@@ -10,3 +10,7 @@ class UserCredentials(BaseModel):
 class LoginCredentials(BaseModel):
     email: str
     password: str
+
+class RagFlowKeys(BaseModel):
+    api_key: str
+    auth_key: str

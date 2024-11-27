@@ -26,7 +26,8 @@ class DatabaseSettings(BaseSettings):
 class Settings(DatabaseSettings):
     model_config = SettingsConfigDict(extra="allow")
 
-    RAGFLOW_API_KEY: str
+    RAGFLOW_API_KEY: str = ""
+    RAGFLOW_AUTH_KEY: str = ""
     RAGFLOW_HOST: str
     RAGFLOW_PORT: str
 
