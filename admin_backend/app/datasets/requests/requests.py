@@ -8,3 +8,7 @@ class NewDataset(BaseModel):
     language: str
     permission: str
     chunk_method: str
+
+
+class DeleteDatasets(BaseModel):
+    list_id: list[str]

@@ -8,6 +8,8 @@ from app.datasets.requests.requests import NewDataset
 from app.datasets.responses.responses import CreatedDataset
 from app.config.config import app_logger
 
+from admin_backend.app.datasets.requests.requests import DeleteDatasets
+
 datasets = APIRouter(prefix="/api/v1/datasets")
 
 
@@ -57,3 +59,17 @@ async def get_datasets_list(
         return JSONResponse(
             status_code=http.HTTPStatus.INTERNAL_SERVER_ERROR,
         )
+
+
+@datasets.post("/delete")
+async def delete_wished_datasets(delete: DeleteDatasets) -> JSONResponse:
+    flow = RAGFlow(api_key="", base_url="")
+    if len(delete.list_id) == 0:
+        app_logger.error(f"{__name__}: nothing to delete")
+        return JSONResponse(status_code=http.HTTPStatus.BAD_REQUEST)
+    try:
+        flow.delete_datasets(delete.list_id)
+        return JSONResponse(status_code=http.HTTPStatus.ACCEPTED)
+    except Exception as err:
+        app_logger.error(f"{__name__}: {err}")
+        return JSONResponse(status_code=http.HTTPStatus.INTERNAL_SERVER_ERROR)
