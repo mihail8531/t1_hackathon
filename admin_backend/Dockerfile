@@ -19,4 +19,4 @@ RUN poetry config virtualenvs.create false \
 
 COPY . /app/
 
-ENTRYPOINT uvicorn --factory app:create_app --host ${ADMIN_BACKEND_HOST} --port ${ADMIN_BACKEND_PORT}
+ENTRYPOINT uvicorn --factory main:create_app --host ${ADMIN_BACKEND_HOST} --port ${ADMIN_BACKEND_PORT}

@@ -4,10 +4,9 @@ from typing import Iterable
 from fastapi import APIRouter, HTTPException, UploadFile
 from fastapi import Response
 
-from file_services.converter import SUPPORTED_EXTS, File, FileConverter
-from file_services.csv_covnerter import CSVtoXLSXConverter
-from file_services.empty_converter import EmptyConverter
-
+from .converter import SUPPORTED_EXTS, File, FileConverter
+from .csv_covnerter import CSVtoXLSXConverter
+from .empty_converter import EmptyConverter
 
 files_uploader = APIRouter(prefix="/api/v1/documents")
 
@@ -35,7 +34,7 @@ def upload_new_file(file: UploadFile) -> Response:
     converted_file = converter.convert_file(
         File(content=file.file, name=file.filename or "")
     )
-    
-    #TODO передача файла 
+
+    # TODO передача файла
 
     return Response(status_code=http.HTTPStatus.ACCEPTED)

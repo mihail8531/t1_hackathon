@@ -1,9 +1,10 @@
 from typing import Any, Optional
 import re
 
+import aiologger
 import asyncpg
 
-from admin_backend.exceptions.exceptions import ApplicationError
+from app.exceptions.exceptions import ApplicationError
 
 
 class PostgresqlRepository:
@@ -16,10 +17,13 @@ class PostgresqlRepository:
             return False
         return True
 
-    def __init__(self, dsn: str) -> None:
+    def __init__(self, dsn: str, logger: aiologger.Logger) -> None:
+        self._log = logger
         self._dsn = dsn
 
-    async def load(self, q: str, *, records_limit: Optional[int] = None) -> list[tuple[Any]]:
+    async def load(
+        self, q: str, *, records_limit: Optional[int] = None
+    ) -> list[tuple[Any]]:
         to_ret = []
         conn = None
         try:
@@ -32,13 +36,9 @@ class PostgresqlRepository:
                         return to_ret
                     to_ret.append(row)
         except Exception as err:
+            self._log.error(f"{__name__}: {err}")
             await conn.Close()
             raise ApplicationError(err)
 
         if conn is not None:
             await conn.Close()
-
-
-
-
-
