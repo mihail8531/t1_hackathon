@@ -4,7 +4,7 @@ import re
 import aiologger
 import asyncpg
 
-from app.exceptions.exceptions import ApplicationError
+from admin_backend.app.exceptions.exceptions import ApplicationError
 
 
 class PostgresqlRepository:
@@ -22,23 +22,24 @@ class PostgresqlRepository:
         self._dsn = dsn
 
     async def load(
-        self, q: str, *, records_limit: Optional[int] = None
+        self,
+        q: str,
+        *,
+        records_limit: Optional[int] = None,
+        timeout: float = 5.0,
     ) -> list[tuple[Any]]:
         to_ret = []
-        conn = None
         try:
-            conn = await asyncpg.connect(self._dsn)
-            rows = await conn.fetch(q)
-            if records_limit is not None:
+            with asyncpg.connect(self._dsn, timeout=timeout) as conn:
+                rows = await conn.fetch(q)
+                if records_limit is None:
+                    return rows
+
                 for idx, row in enumerate(rows, 1):
-                    if records_limit == idx:
-                        await conn.Close()
-                        return to_ret
-                    to_ret.append(row)
+                    if records_limit != idx:
+                        to_ret.append(row)
+                        continue
+                    return to_ret
         except Exception as err:
             self._log.error(f"{__name__}: {err}")
-            await conn.Close()
             raise ApplicationError(err)
-
-        if conn is not None:
-            await conn.Close()
