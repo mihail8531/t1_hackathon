@@ -1,4 +1,5 @@
 from contextlib import asynccontextmanager
+import sys
 from fastapi import FastAPI
 import uvicorn
 from app.exceptions.exceptions import NotFoundError, ApplicationError
@@ -20,6 +21,7 @@ async def lifespan(app: FastAPI):
         settings.RAGFLOW_API_KEY, settings.RAGFLOW_AUTH_KEY = await get_rag_api_token()
     except ApplicationError as err:
         await app_logger.error(f"{__name__}: failed to fetch RAG API token\n({err})")
+        raise
     app.state.settings = settings
     yield
 
