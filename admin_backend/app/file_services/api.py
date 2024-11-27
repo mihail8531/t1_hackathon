@@ -1,9 +1,11 @@
 import http
-from typing import Optional
+from typing import Annotated, Optional
 
-from fastapi import APIRouter, HTTPException, UploadFile
+from fastapi import APIRouter, Depends, HTTPException, UploadFile
 from fastapi.responses import JSONResponse
 from ragflow_sdk import RAGFlow
+
+from app.dependencies import get_settings
 
 from .converter import SUPPORTED_EXTS, File, FileConverter
 from .csv_covnerter import CSVtoXLSXConverter
@@ -12,7 +14,6 @@ from ..config.config import app_logger
 from ..settings import Settings
 
 files_uploader = APIRouter(prefix="/api/v1/documents")
-rag = Settings()
 
 
 def get_converter(file: UploadFile) -> FileConverter:
@@ -31,6 +32,7 @@ def get_extension(filename: str) -> str | None:
 
 @files_uploader.post("/new")
 async def upload_new_file(
+    rag_settings: Annotated[Settings, Depends(get_settings)],
     file: UploadFile,
     filename: str,
     description: str,
@@ -40,7 +42,9 @@ async def upload_new_file(
     avatar: Optional[str] = "",
     dataset_id: Optional[str] = None,
 ) -> JSONResponse:
-    flow = RAGFlow(api_key=rag.RAGFLOW_API_KEY, base_url=rag.ragflow_base_url)
+    flow = RAGFlow(
+        api_key=rag_settings.RAGFLOW_API_KEY, base_url=rag_settings.ragflow_base_url
+    )
     extension = get_extension(file.filename or "")
     if extension not in SUPPORTED_EXTS:
         raise HTTPException(status_code=415, detail="wrong extension")

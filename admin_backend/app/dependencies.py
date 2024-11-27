@@ -7,12 +7,12 @@ from app.db import get_connection
 from app.assistant_window.assistant_window import AssistantWindowRepository
 
 
-def settings(request: Request) -> Settings:
+def get_settings(request: Request) -> Settings:
     return request.app.state.settings
 
 
 async def get_db_connection(
-    settings: Annotated[Settings, Depends(settings)]
+    settings: Annotated[Settings, Depends(get_settings)]
 ) -> AsyncGenerator[asyncpg.Connection, None]:
     async with get_connection(settings.DB_URL) as con:
         yield con
