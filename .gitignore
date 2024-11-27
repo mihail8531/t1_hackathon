@@ -1,6 +1,7 @@
 **/.env
 **/*.log
 hack_enc
+hack_env
 __pycache__
 .idea
 
