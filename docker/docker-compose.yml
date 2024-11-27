@@ -38,8 +38,8 @@ services:
     volumes:
       - postgres-db-volume:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD", "pg_isready", "-U", "airflow"]
-      interval: 10s
+      test: ["CMD", "pg_isready", "-U", "db_user", "-d", "db_backend"]
+      interval: 5s
       retries: 5
       start_period: 5s
     restart: always
@@ -50,8 +50,11 @@ services:
     build:
       context: ../admin_backend
     depends_on:
-      - ragflow
-      - postgres
+      ragflow:
+        condition: service_started
+      postgres:
+        condition: service_healthy
+
     env_file:
       - .env
     network_mode: "host"

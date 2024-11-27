@@ -1,6 +1,7 @@
 from typing import Annotated, AsyncGenerator
 import asyncpg
 from fastapi import Depends, Request
+from app.repositories import AssistantWindowPgRepository
 from app.settings import Settings
 from db import get_connection
 from assistant_window import AssistantWindowRepository
@@ -20,4 +21,4 @@ async def get_db_connection(
 async def get_assistant_window_repository(
     con: Annotated[asyncpg.Connection, Depends(get_db_connection)]
 ) -> AssistantWindowRepository:
-    pass # TODO 
+    return AssistantWindowPgRepository(con)
