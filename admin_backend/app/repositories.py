@@ -1,5 +1,8 @@
 import asyncpg
-from app.assistant_window import AssistantWindow, AssistantWindowRepository
+from app.assistant_window.assistant_window import (
+    AssistantWindow,
+    AssistantWindowRepository,
+)
 from app.exceptions.exceptions import NotFoundError
 
 
@@ -12,7 +15,7 @@ class AssistantWindowPgRepository(AssistantWindowRepository):
         SELECT * FROM assistant_window
         """
         res = []
-        for row in await self._con.fetch(query, ()):
+        for row in await self._con.fetch(query):
             res.append(
                 AssistantWindow(
                     id=row["id"], style=row["style"], assistant_id=row["assistant_id"]
@@ -22,10 +25,10 @@ class AssistantWindowPgRepository(AssistantWindowRepository):
 
     async def get_by_id(self, id: int) -> AssistantWindow:
         query = """
-        SELECT FROM assistant_window
+        SELECT * FROM assistant_window
         WHERE id = $1
         """
-        rows = await self._con.fetch(query, (id,))
+        rows = await self._con.fetch(query, id)
         if len(rows) == 0:
             raise NotFoundError
         row = rows[0]
@@ -39,7 +42,7 @@ class AssistantWindowPgRepository(AssistantWindowRepository):
         VALUES ($1, $2)
         RETURNING id
         """
-        rows = await self._con.fetch(query, (style, assistant_id))
+        rows = await self._con.fetch(query, style, assistant_id)
         row = rows[0]
         return AssistantWindow(id=row["id"], style=style, assistant_id=assistant_id)
 
@@ -48,7 +51,7 @@ class AssistantWindowPgRepository(AssistantWindowRepository):
         DELETE FROM assistant_window
         WHERE id = $1
         """
-        await self._con.execute(query, (id,))
+        await self._con.execute(query, id)
 
     async def update(self, assistant_window: AssistantWindow) -> None:
         query = """
@@ -60,9 +63,7 @@ class AssistantWindowPgRepository(AssistantWindowRepository):
         """
         await self._con.execute(
             query,
-            (
-                assistant_window.id,
-                assistant_window.style,
-                assistant_window.assistant_id,
-            ),
+            assistant_window.id,
+            assistant_window.style,
+            assistant_window.assistant_id,
         )

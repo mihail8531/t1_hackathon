@@ -3,8 +3,8 @@ import asyncpg
 from fastapi import Depends, Request
 from app.repositories import AssistantWindowPgRepository
 from app.settings import Settings
-from db import get_connection
-from assistant_window import AssistantWindowRepository
+from app.db import get_connection
+from app.assistant_window.assistant_window import AssistantWindowRepository
 
 
 def settings(request: Request) -> Settings:
