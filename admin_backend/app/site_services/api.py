@@ -9,7 +9,7 @@ from app.dependencies import get_settings
 from ragflow_sdk import RAGFlow
 from ..config.config import app_logger
 
-site = APIRouter(prefix="/api/v1/site")
+sites = APIRouter(prefix="/api/v1/site")
 
 
 def url_to_filename(url: str) -> str:
@@ -22,7 +22,7 @@ def url_to_filename(url: str) -> str:
     return f"{filename}.txt"
 
 
-@site.post("/new")
+@sites.post("/new")
 async def upload_from_site(
     settings: Annotated[Settings, Depends(get_settings)],
     url: str,
