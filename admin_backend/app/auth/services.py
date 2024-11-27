@@ -17,12 +17,13 @@ auth_settings = AuthSettings(_env_file=".env")
 
 
 def encrypt(passwd: str, pub: str) -> str:
-    buff = io.BytesIO()
     rsa_key = RSA.import_key(pub)
     cipher = PKCS1_OAEP.new(rsa_key)
-    base64.encode(BytesIO(passwd.encode("utf-8")), buff)
-    encrypted_message = cipher.encrypt(buff.getbuffer())
-    return base64.urlsafe_b64encode(encrypted_message).decode()
+    encrypted_password = cipher.encrypt(passwd.encode('utf-8'))
+    
+    # Кодируем результат в Base64
+    encrypted_base64 = base64.b64encode(encrypted_password).decode('utf-8')
+    return encrypted_base64
 
 
 async def get_rag_api_token(*, timeout: float = 10.0) -> str:
@@ -31,7 +32,7 @@ async def get_rag_api_token(*, timeout: float = 10.0) -> str:
         encrypted_pass = encrypt(auth_settings.APP_PASSWD, RAG_API_PUBLIC_KEY)
         data = UserCredentials(
             email=auth_settings.APP_LOGIN,
-            nickname=auth_settings.APP_LOGIN,
+            nickname=auth_settings.APP_LOGIN.split("@")[0],
             password=encrypted_pass,
         )
     except Exception as err:
@@ -49,12 +50,15 @@ async def get_rag_api_token(*, timeout: float = 10.0) -> str:
         ) as err:
             await app_logger.error(f"{__name__}: {err}")
             raise ApplicationError("remote server conversation error")
-
+    print(encrypted_pass)
+    print(resp.content)
+    print(resp.status_code)
     login_data: Optional[LoginCredentials] = None
     try:
         encrypted_pass = encrypt(auth_settings.APP_PASSWD, RAG_API_PUBLIC_KEY)
         login_data = UserCredentials(
             email=auth_settings.APP_LOGIN,
+            nickname=auth_settings.APP_LOGIN.split("@")[0],
             password=encrypted_pass,
         )
     except Exception as err:
@@ -74,7 +78,8 @@ async def get_rag_api_token(*, timeout: float = 10.0) -> str:
         ) as err:
             await app_logger.error(f"{__name__}: {err}")
             raise ApplicationError("remote server conversation error")
-
+        print(resp.content)
+        print(resp.status_code)
         auth_header = resp.headers.get("Authorization")
         if auth_header is None:
             await app_logger.error(f"{__name__}: Authorization header not found")
