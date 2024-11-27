@@ -19,7 +19,7 @@
       <div style="width: 100%; height: 120px; display: flex; gap: 12px; padding-right: 12px">
         <Textarea v-model="value" style="width: 100%; height: 120px; resize: none" />
         <div style="height: fit-content; margin-top: auto; display: flex; flex-direction: column; gap: 12px">
-          <Button label="Отправить" severity="secondary" variant="text" raised />
+          <Button @click="sendMessage" label="Отправить" severity="secondary" variant="text" raised />
           <Button
             @click="showPreview = true"
             label="Закрыть"
@@ -35,71 +35,79 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 
 import Button from 'primevue/button';
 import Textarea from 'primevue/textarea';
 
 import chatImage from '@/assets/img/chat.png';
 
-const messages = ref(
-  [
-    {
-      role: 'user',
-      time: '2023-11-01T12:34:56Z',
-      text: 'Привет! Как дела?'
-    },
-    {
-      role: 'assistant',
-      time: '2023-11-01T12:35:15Z',
-      text: 'Здравствуйте! Всё отлично, спасибо. Чем могу помочь?'
-    },
-    {
-      role: 'user',
-      time: '2023-11-01T12:36:20Z',
-      text: 'Мне нужно узнать, как приготовить борщ.'
-    },
-    {
-      role: 'assistant',
-      time: '2023-11-01T12:37:05Z',
-      text: 'Конечно, я помогу вам с рецептом борща. Это будет классический рецепт?'
-    },
-    {
-      role: 'user',
-      time: '2023-11-01T12:38:00Z',
-      text: 'Да, именно классический вариант интересует.'
-    },
-    {
-      role: 'assistant',
-      time: '2023-11-01T12:39:30Z',
-      text: 'Отлично! Для начала подготовьте ингредиенты...'
-    },
-    {
-      role: 'user',
-      time: '2023-11-02T09:25:45Z',
-      text: 'Спасибо за рецепт! Борщ получился очень вкусным!'
-    },
-    {
-      role: 'assistant',
-      time: '2023-11-02T09:26:50Z',
-      text: 'Рада слышать, что всё получилось! Если у вас есть ещё вопросы, задавайте.'
-    },
-    {
-      role: 'user',
-      time: '2023-11-03T14:32:17Z',
-      text: 'Подскажите, а какой соус лучше всего подходит к борщу?'
-    },
-    {
-      role: 'assistant',
-      time: '2023-11-03T14:33:40Z',
-      text: 'К борщу традиционно подают сметану. Она добавляет нежный сливочный вкус и прекрасно дополняет блюдо.'
-    }
-  ].map(el => ({ ...el, time: new Date(el.time), id: Math.random() }))
-);
+const messages = ref<{ id: string; text: string; time: Date; role: 'user' | 'assistant' }[]>([]);
 
 const value = ref('');
 
-const showPreview = ref(true);
+const showPreview = ref(false);
+
+const headers = { Authorization: 'Bearer ragflow-A3NjhhNmYyYWNhNDExZWZhMjUyMDI0Mm' };
+onMounted(async () => {
+  const res = await fetch('http://127.0.0.1:8888/api/v1/chats', {
+    headers
+  });
+  const data = await res.json();
+
+  console.log('Data: ', data);
+
+  if (data.data[0]) {
+    messages.value.push({
+      id: Math.random().toString(36).slice(2),
+      text: data.data[0].prompt.opener,
+      time: new Date(),
+      role: 'assistant'
+    });
+  }
+});
+
+async function sendMessage() {
+  messages.value.push({ id: Math.random().toString(36).slice(2), text: value.value, time: new Date(), role: 'user' });
+
+  const test = await fetch('http://127.0.0.1:8888/api/v1/chats/eb6e2cbeaca411efa71c0242ac120006/completions', {
+    headers,
+    method: 'POST',
+    body: JSON.stringify({
+      question: value.value,
+      stream: false
+    })
+  });
+
+  const data = await test.json();
+  console.log('Send message: ', data);
+
+  const session_id = data.data.session_id;
+
+  if (data.data) {
+    messages.value.push({ id: data.data.id, text: data.data.answer, time: new Date(), role: 'assistant' });
+    value.value = '';
+  }
+
+  // messages.value.push({
+  //   id: Math.random().toString(36).slice(2),
+  //   text: 'А что будет после?',
+  //   time: new Date(),
+  //   role: 'user'
+  // });
+
+  // const test2 = await fetch('http://127.0.0.1:8888/api/v1/conversation/completion', {
+  //   headers,
+  //   method: 'POST',
+  //   body: JSON.stringify({
+  //     question: messages.value.at(-1)?.text,
+  //     stream: false,
+  //     session_id
+  //     // conversation_id: seeeion_id,
+  //     // messages: messages.value.map(el => ({ content: el.text, role: el.role }))
+  //   })
+  // });
+}
 </script>
 
 <style lang="scss" module>
