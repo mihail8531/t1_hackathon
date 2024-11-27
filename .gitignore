@@ -3,3 +3,8 @@
 hack_enc
 __pycache__
 .idea
+
+
+**/node_modules
+**/dist
+**/.vscode
