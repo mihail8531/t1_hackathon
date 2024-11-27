@@ -14,15 +14,19 @@ from app.db_services.requests.requests import (
     SqlQuery,
 )
 from app.exceptions.exceptions import ApplicationError
+from ..settings import Settings
 
 databases = APIRouter(prefix="/api/v1/databases")
+rag = Settings()
 
 
 @databases.post("/sql/lookup/")
 async def lookup_data_using_sql(query: SqlQuery) -> JSONResponse:
     db_provider = query.db_provider.lower()
     if db_provider not in POSSIBLE_DB_PROVIDERS:
-        return JSONResponse(status_code=http.HTTPStatus.UNPROCESSABLE_ENTITY)
+        return JSONResponse(
+            {"error": 422}, status_code=http.HTTPStatus.UNPROCESSABLE_ENTITY
+        )
 
     dsn = (
         f"{query.db_provider}://{query.db_user}:{query.db_user_passwd}"
@@ -30,13 +34,18 @@ async def lookup_data_using_sql(query: SqlQuery) -> JSONResponse:
     )
     repo = PostgresqlRepository(dsn, app_logger)
     if not repo.query_is_readonly(query.query):
-        return JSONResponse(status_code=http.HTTPStatus.UNPROCESSABLE_ENTITY)
+        return JSONResponse(
+            {"error": 422}, status_code=http.HTTPStatus.UNPROCESSABLE_ENTITY
+        )
 
     try:
         data = await repo.load(query.query, records_limit=query.limit)
     except ApplicationError as err:
         app_logger.error(f"{__name__}: {err}")
-        return JSONResponse(status_code=http.HTTPStatus.INTERNAL_SERVER_ERROR)
+        return JSONResponse(
+            {"error": 500},
+            status_code=http.HTTPStatus.INTERNAL_SERVER_ERROR,
+        )
     return data
 
 
@@ -44,7 +53,7 @@ async def lookup_data_using_sql(query: SqlQuery) -> JSONResponse:
 async def upload_data_using_sql(query: SqlQuery) -> JSONResponse:
     """load and send data from sql db into S3 storage"""
     _data = []
-    flow = RAGFlow(api_key="")
+    flow = RAGFlow(api_key=rag.RAGFLOW_API_KEY, base_url=rag.ragflow_base_url)
     db_provider = query.db_provider.lower()
     if db_provider not in POSSIBLE_DB_PROVIDERS:
         return JSONResponse(status_code=http.HTTPStatus.UNPROCESSABLE_ENTITY)
@@ -55,10 +64,14 @@ async def upload_data_using_sql(query: SqlQuery) -> JSONResponse:
     )
     repo = PostgresqlRepository(dsn, app_logger)
     if not repo.query_is_readonly(query.query):
-        return JSONResponse(status_code=http.HTTPStatus.UNPROCESSABLE_ENTITY)
+        return JSONResponse(
+            {"error": 422}, status_code=http.HTTPStatus.UNPROCESSABLE_ENTITY
+        )
 
     if not query.content_type in (StoredContentType.TEXT,):
-        return JSONResponse(status_code=http.HTTPStatus.UNPROCESSABLE_ENTITY)
+        return JSONResponse(
+            {"error": 422}, status_code=http.HTTPStatus.UNPROCESSABLE_ENTITY
+        )
 
     try:
         data = await repo.load(query.query, records_limit=query.limit)
@@ -67,7 +80,9 @@ async def upload_data_using_sql(query: SqlQuery) -> JSONResponse:
                 app_logger.warning(
                     f"{__name__}: content type '{type(col)}' not supported"
                 )
-                return JSONResponse(status_code=http.HTTPStatus.BAD_REQUEST)
+                return JSONResponse(
+                    {"error": 400}, status_code=http.HTTPStatus.BAD_REQUEST
+                )
 
             if isinstance(col, str):
                 col = col.encode("utf-8")
@@ -80,7 +95,9 @@ async def upload_data_using_sql(query: SqlQuery) -> JSONResponse:
             )
     except ApplicationError as err:
         app_logger.error(f"{__name__}: {err}")
-        return JSONResponse(status_code=http.HTTPStatus.INTERNAL_SERVER_ERROR)
+        return JSONResponse(
+            {"error": 500}, status_code=http.HTTPStatus.INTERNAL_SERVER_ERROR
+        )
 
     if query.dataset_id is None:
         try:
@@ -98,16 +115,20 @@ async def upload_data_using_sql(query: SqlQuery) -> JSONResponse:
             return JSONResponse(rsp)
         except Exception as err:
             app_logger.error(f"{__name__}: {err}")
-            return JSONResponse(status_code=http.HTTPStatus.INTERNAL_SERVER_ERROR)
+            return JSONResponse(
+                {"error": 500}, status_code=http.HTTPStatus.INTERNAL_SERVER_ERROR
+            )
 
     try:
         ds = flow.list_datasets(id=query.dataset_id)
         if len(ds) == 0:
             app_logger.error(f"{__name__}: dataset {query.dataset_id} not found")
-            return JSONResponse(status_code=http.HTTPStatus.NOT_FOUND)
+            return JSONResponse({"error": 404}, status_code=http.HTTPStatus.NOT_FOUND)
         ds[0].upload_documents(_data)
         rsp = {"dataset_id": ds[0].id}
         return JSONResponse(rsp)
     except Exception as err:
         app_logger.error(f"{__name__}: {err}")
-        return JSONResponse(status_code=http.HTTPStatus.INTERNAL_SERVER_ERROR)
+        return JSONResponse(
+            {"error": 500}, status_code=http.HTTPStatus.INTERNAL_SERVER_ERROR
+        )

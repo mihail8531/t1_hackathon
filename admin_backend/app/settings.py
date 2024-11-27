@@ -21,3 +21,9 @@ class Settings(DatabaseSettings):
     model_config = SettingsConfigDict(extra="allow")
 
     RAGFLOW_API_KEY: str
+    RAGFLOW_HOST: str
+    RAGFLOW_PORT: str
+
+    @property
+    def ragflow_base_url(self) -> str:
+        return f"http://{self.RAGFLOW_HOST}:{self.RAGFLOW_PORT}/"
