@@ -17,7 +17,11 @@ openpyxl = "^3.1.5"
 detect-delimiter = "^0.1.1"
 aiologger = "^0.7.0"
 ragflow-sdk = "^0.13.0"
+psycopg = "^3.2.3"
 
+
+[tool.poetry.group.dev.dependencies]
+asyncpg-stubs = "^0.30.0"
 
 [build-system]
 requires = ["poetry-core"]

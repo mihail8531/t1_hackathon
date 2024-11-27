@@ -29,6 +29,23 @@ services:
     # If you're using Docker Desktop, the --add-host flag is optional. This flag makes sure that the host's internal IP gets exposed to the Prometheus container. 
     extra_hosts:
       - "host.docker.internal:host-gateway"
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: db_user
+      POSTGRES_PASSWORD: db_password
+      POSTGRES_DB: db_backend
+    volumes:
+      - postgres-db-volume:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "airflow"]
+      interval: 10s
+      retries: 5
+      start_period: 5s
+    restart: always
+    ports:
+      - 5444:5432
+
   admin_backend:
     build:
       context: ../admin_backend
@@ -38,5 +55,7 @@ services:
       - .env
     ports:
       - 9100:9100
+volumes:
+  postgres-db-volume:
 
 
