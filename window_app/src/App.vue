@@ -46,7 +46,10 @@ const messages = ref<{ id: string; text: string; time: Date; role: 'user' | 'ass
 
 const value = ref('');
 
-const showPreview = ref(false);
+const session_id = ref<string | null>(null);
+const assistant_id = ref<string | null>(null);
+
+const showPreview = ref(true);
 
 const headers = { Authorization: 'Bearer ragflow-A3NjhhNmYyYWNhNDExZWZhMjUyMDI0Mm' };
 onMounted(async () => {
@@ -58,6 +61,8 @@ onMounted(async () => {
   console.log('Data: ', data);
 
   if (data.data[0]) {
+    assistant_id.value = data.data[0].id;
+
     messages.value.push({
       id: Math.random().toString(36).slice(2),
       text: data.data[0].prompt.opener,
@@ -68,45 +73,50 @@ onMounted(async () => {
 });
 
 async function sendMessage() {
+  if (!assistant_id.value) return;
+
   messages.value.push({ id: Math.random().toString(36).slice(2), text: value.value, time: new Date(), role: 'user' });
 
-  const test = await fetch('http://127.0.0.1:8888/api/v1/chats/eb6e2cbeaca411efa71c0242ac120006/completions', {
+  if (!session_id.value) {
+    const test = await fetch(`http://127.0.0.1:8888/api/v1/chats/${assistant_id.value}/completions`, {
+      headers,
+      method: 'POST',
+      body: JSON.stringify({
+        question: value.value,
+        stream: false
+      })
+    });
+
+    if (test.ok) {
+      const data = await test.json();
+      session_id.value = data.data.session_id;
+
+      if (data.data) {
+        messages.value.push({ id: data.data.id, text: data.data.answer, time: new Date(), role: 'assistant' });
+        value.value = '';
+      }
+    }
+
+    return;
+  }
+
+  const test = await fetch(`http://127.0.0.1:8888/api/v1/chats/${assistant_id.value}/completions`, {
     headers,
     method: 'POST',
     body: JSON.stringify({
       question: value.value,
-      stream: false
+      stream: false,
+      session_id: session_id.value
     })
   });
 
-  const data = await test.json();
-  console.log('Send message: ', data);
-
-  const session_id = data.data.session_id;
-
-  if (data.data) {
-    messages.value.push({ id: data.data.id, text: data.data.answer, time: new Date(), role: 'assistant' });
-    value.value = '';
+  if (test.ok) {
+    const data = await test.json();
+    if (data.data) {
+      messages.value.push({ id: data.data.id, text: data.data.answer, time: new Date(), role: 'assistant' });
+      value.value = '';
+    }
   }
-
-  // messages.value.push({
-  //   id: Math.random().toString(36).slice(2),
-  //   text: 'А что будет после?',
-  //   time: new Date(),
-  //   role: 'user'
-  // });
-
-  // const test2 = await fetch('http://127.0.0.1:8888/api/v1/conversation/completion', {
-  //   headers,
-  //   method: 'POST',
-  //   body: JSON.stringify({
-  //     question: messages.value.at(-1)?.text,
-  //     stream: false,
-  //     session_id
-  //     // conversation_id: seeeion_id,
-  //     // messages: messages.value.map(el => ({ content: el.text, role: el.role }))
-  //   })
-  // });
 }
 </script>
 
