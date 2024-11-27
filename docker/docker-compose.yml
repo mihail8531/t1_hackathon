@@ -51,10 +51,10 @@ services:
       context: ../admin_backend
     depends_on:
       - ragflow
+      - postgres
     env_file:
       - .env
-    ports:
-      - 9100:9100
+    network_mode: "host"
 volumes:
   postgres-db-volume:
 
