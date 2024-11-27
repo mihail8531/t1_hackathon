@@ -4,7 +4,7 @@ import re
 import aiologger
 import asyncpg
 
-from admin_backend.app.exceptions.exceptions import ApplicationError
+from app.exceptions.exceptions import ApplicationError
 
 
 class PostgresqlRepository:

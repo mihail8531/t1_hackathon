@@ -3,7 +3,7 @@ from typing import Optional
 from pydantic import BaseModel, Field
 from enum import StrEnum
 
-from admin_backend.app.datasets.requests.requests import NewDataset
+from app.datasets.requests.requests import NewDataset
 
 
 class StoredContentType(StrEnum):

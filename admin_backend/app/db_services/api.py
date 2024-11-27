@@ -4,16 +4,16 @@ from fastapi import APIRouter
 from fastapi.responses import JSONResponse
 from ragflow_sdk import RAGFlow
 
-from admin_backend.app.config.config import app_logger
-from admin_backend.app.db_services.db_adapters.adapters import POSSIBLE_DB_PROVIDERS
-from admin_backend.app.db_services.db_adapters.postgres_adapter import (
+from app.config.config import app_logger
+from app.db_services.db_adapters.adapters import POSSIBLE_DB_PROVIDERS
+from app.db_services.db_adapters.postgres_adapter import (
     PostgresqlRepository,
 )
-from admin_backend.app.db_services.requests.requests import (
+from app.db_services.requests.requests import (
     StoredContentType,
     SqlQuery,
 )
-from admin_backend.app.exceptions.exceptions import ApplicationError
+from app.exceptions.exceptions import ApplicationError
 
 databases = APIRouter(prefix="/api/v1/databases")
 

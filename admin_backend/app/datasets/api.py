@@ -8,7 +8,7 @@ from app.datasets.requests.requests import NewDataset
 from app.datasets.responses.responses import CreatedDataset
 from app.config.config import app_logger
 
-from admin_backend.app.datasets.requests.requests import DeleteDatasets
+from app.datasets.requests.requests import DeleteDatasets
 
 datasets = APIRouter(prefix="/api/v1/datasets")
 
