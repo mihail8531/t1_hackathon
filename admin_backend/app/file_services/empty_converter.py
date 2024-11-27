@@ -1,4 +1,4 @@
-from file_services.converter import File, FileConverter
+from .converter import File, FileConverter
 
 
 class EmptyConverter(FileConverter):

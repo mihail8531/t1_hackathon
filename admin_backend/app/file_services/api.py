@@ -4,9 +4,9 @@ from typing import Iterable
 from fastapi import APIRouter, HTTPException, UploadFile
 from fastapi import Response
 
-from file_services.converter import SUPPORTED_EXTS, File, FileConverter
-from file_services.csv_covnerter import CSVtoXLSXConverter
-from file_services.empty_converter import EmptyConverter
+from .converter import SUPPORTED_EXTS, File, FileConverter
+from .csv_covnerter import CSVtoXLSXConverter
+from .empty_converter import EmptyConverter
 
 files_uploader = APIRouter(prefix="/api/v1/documents")
 

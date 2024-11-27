@@ -1,5 +1,5 @@
 from io import BytesIO
-from file_services.converter import FileConverter, File
+from .converter import FileConverter, File
 import detect_delimiter
 import pandas as pd
 
