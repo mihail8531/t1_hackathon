@@ -79,7 +79,7 @@ async def upload_data_using_sql(
 
             _data.append(
                 {
-                    "display_name": f"{query.content_title}_{idx}",
+                    "displayed_name": f"{query.content_title}_{idx}",
                     "blob": col,
                 }
             )
