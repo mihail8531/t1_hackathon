@@ -1,5 +1,7 @@
 import { createApp } from 'vue';
+
 import PrimeVue from 'primevue/config';
+import ToastService from 'primevue/toastservice';
 
 import './style.css';
 import ruRu from '@/assets/lacale';
@@ -19,4 +21,5 @@ createApp(App)
       }
     }
   })
+  .use(ToastService)
   .mount('body');
