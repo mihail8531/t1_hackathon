@@ -71,7 +71,7 @@ import customization from './components/steps/customization.vue';
 import { authService, RAGServiceOrigin, RAGServiceFork } from './services';
 import type { GetTokensResponse } from './services/authService/@types';
 
-const curStep = ref(4);
+const curStep = ref(1);
 const list = ref([
   { step: 1, done: false, title: 'Выбор модели', component: modelSelect },
   { step: 2, done: false, title: 'Настройка модели', component: modelConfig },
