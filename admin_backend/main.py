@@ -1,6 +1,7 @@
 from contextlib import asynccontextmanager
 import sys
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 from app.exceptions.exceptions import NotFoundError, ApplicationError
 from app.exceptions.handlers import not_found_exception_handler
@@ -25,9 +26,18 @@ async def lifespan(app: FastAPI):
     app.state.settings = settings
     yield
 
+origins = ["*"]
+
 
 def create_app() -> FastAPI:
     app = FastAPI(debug=True, lifespan=lifespan)
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=origins,
+        allow_credentials=True,
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
     app.include_router(files_uploader)
     app.include_router(databases)
     app.include_router(assistant_windows)
