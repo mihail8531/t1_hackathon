@@ -146,5 +146,5 @@ async def upload_data_using_sql(
 
 @databases.get("/providers")
 async def get_sql_db_providers() -> JSONResponse:
-    """get all supported db providers"""
+    """get all supported db providers."""
     return JSONResponse(list(POSSIBLE_DB_PROVIDERS))
