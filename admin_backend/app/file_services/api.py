@@ -52,8 +52,9 @@ async def upload_new_file(
     converted_file = converter.convert_file(
         File(content=file.file, name=file.filename or "")
     )
+    # displayed_name
     _data = [
-        {"display_name": converted_file.name, "blob": converted_file.content},
+        {"displayed_name": converted_file.name, "blob": converted_file.content},
     ]
     if dataset_id is None:
         try:
