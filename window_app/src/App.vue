@@ -1,11 +1,11 @@
 <template>
-  <div :class="$style.container">
+  <div :class="$style.container" :style="style">
     <div v-if="showPreview" :class="$style.preview">
       <img @click="showPreview = false" :src="chatImage" alt="chat" />
     </div>
 
     <div v-else :class="$style.chat">
-      <ul :class="$style.chat__list">
+      <ul :class="$style.chat__list" ref="list">
         <li
           v-for="message in messages"
           :key="message.id"
@@ -14,19 +14,31 @@
           <p>{{ message.text }}</p>
           <p :class="$style.message__time">{{ message.time.toLocaleString() }}</p>
         </li>
+        <li v-if="loading" :class="{ [$style.message]: true, [$style.message__assistant]: true }">
+          <p>Асистент печатает...</p>
+        </li>
       </ul>
 
-      <div style="width: 100%; height: 120px; display: flex; gap: 12px; padding-right: 12px">
-        <Textarea v-model="value" style="width: 100%; height: 120px; resize: none" />
-        <div style="height: fit-content; margin-top: auto; display: flex; flex-direction: column; gap: 12px">
-          <Button @click="sendMessage" label="Отправить" severity="secondary" variant="text" raised />
+      <div :class="$style.footer">
+        <Textarea v-model="text" @keydown.enter="sendMessage" :disabled="loading" />
+        <div :class="$style.footer__actions">
+          <Button
+            @click="sendMessage"
+            :disabled="loading"
+            variant="text"
+            label="Отправить"
+            severity="secondary"
+            icon="pi pi-send"
+            raised
+          />
           <Button
             @click="showPreview = true"
+            variant="text"
             label="Закрыть"
             severity="danger"
-            variant="text"
-            raised
             aria-label="Cancel"
+            icon="pi pi-times"
+            raised
           />
         </div>
       </div>
@@ -35,88 +47,70 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
+import { CSSProperties, nextTick, onMounted, ref } from 'vue';
 
 import Button from 'primevue/button';
 import Textarea from 'primevue/textarea';
 
 import chatImage from '@/assets/img/chat.png';
 
-const messages = ref<{ id: string; text: string; time: Date; role: 'user' | 'assistant' }[]>([]);
+import { RAGService } from './services';
 
-const value = ref('');
+const text = ref('');
+const messages = ref<{ id: string; text: string; time: Date; role: 'user' | 'assistant' }[]>([]);
+const list = ref<HTMLUListElement | null>(null);
 
 const session_id = ref<string | null>(null);
 const assistant_id = ref<string | null>(null);
+const style = ref<CSSProperties>({
+  '--message-bg-color': '#00bfb6',
+  '--message-text-color': '#ffffff',
+  '--chat-bg-color': '#ffffff'
+});
 
 const showPreview = ref(true);
+const loading = ref(false);
 
-const headers = { Authorization: 'Bearer ragflow-A3NjhhNmYyYWNhNDExZWZhMjUyMDI0Mm' };
-onMounted(async () => {
-  const res = await fetch('http://127.0.0.1:8888/api/v1/chats', {
-    headers
+onMounted(init);
+
+async function init() {
+  const { success, data } = await RAGService.getAssistans();
+
+  if (!success) return;
+
+  assistant_id.value = data.data[0].id;
+  messages.value.push({
+    id: Math.random().toString(36).slice(2),
+    text: data.data[0].prompt.opener,
+    time: new Date(),
+    role: 'assistant'
   });
-  const data = await res.json();
-
-  console.log('Data: ', data);
-
-  if (data.data[0]) {
-    assistant_id.value = data.data[0].id;
-
-    messages.value.push({
-      id: Math.random().toString(36).slice(2),
-      text: data.data[0].prompt.opener,
-      time: new Date(),
-      role: 'assistant'
-    });
-  }
-});
+}
 
 async function sendMessage() {
   if (!assistant_id.value) return;
 
-  messages.value.push({ id: Math.random().toString(36).slice(2), text: value.value, time: new Date(), role: 'user' });
+  loading.value = true;
+  messages.value.push({ id: Math.random().toString(36).slice(2), text: text.value, time: new Date(), role: 'user' });
 
-  if (!session_id.value) {
-    const test = await fetch(`http://127.0.0.1:8888/api/v1/chats/${assistant_id.value}/completions`, {
-      headers,
-      method: 'POST',
-      body: JSON.stringify({
-        question: value.value,
-        stream: false
-      })
-    });
+  const { success, data } = await RAGService.sendMessage(
+    assistant_id.value,
+    session_id.value
+      ? { question: text.value, stream: false, session_id: session_id.value }
+      : { question: text.value, stream: false }
+  );
 
-    if (test.ok) {
-      const data = await test.json();
-      session_id.value = data.data.session_id;
+  if (success) {
+    text.value = '';
+    messages.value.push({ id: data.data.id, text: data.data.answer, time: new Date(), role: 'assistant' });
 
-      if (data.data) {
-        messages.value.push({ id: data.data.id, text: data.data.answer, time: new Date(), role: 'assistant' });
-        value.value = '';
-      }
-    }
+    if (!session_id.value) session_id.value = data.data.session_id;
 
-    return;
+    await nextTick();
+    if (list.value) list.value.scrollTo({ top: list.value.scrollHeight, behavior: 'smooth' });
   }
 
-  const test = await fetch(`http://127.0.0.1:8888/api/v1/chats/${assistant_id.value}/completions`, {
-    headers,
-    method: 'POST',
-    body: JSON.stringify({
-      question: value.value,
-      stream: false,
-      session_id: session_id.value
-    })
-  });
-
-  if (test.ok) {
-    const data = await test.json();
-    if (data.data) {
-      messages.value.push({ id: data.data.id, text: data.data.answer, time: new Date(), role: 'assistant' });
-      value.value = '';
-    }
-  }
+  loading.value = false;
 }
 </script>
 
@@ -143,6 +137,7 @@ async function sendMessage() {
   flex-direction: column;
   gap: 24px;
   padding: 12px 0 12px 12px;
+  background-color: var(--chat-bg-color);
   box-shadow:
     rgba(0, 0, 0, 0.19) 0px 10px 20px,
     rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -152,16 +147,16 @@ async function sendMessage() {
     flex-direction: column;
     align-items: center;
     gap: 36px;
-    overflow: hidden scroll;
+    overflow: auto;
   }
 }
 .message {
   position: relative;
   width: calc(100% - 32px);
   border-radius: 16px;
-  background: #00bfb6;
+  background: var(--message-bg-color);
   padding-bottom: 12px;
-  color: #fff;
+  color: var(--message-text-color);
   padding: 20px;
   &:before {
     content: '';
@@ -177,15 +172,15 @@ async function sendMessage() {
     border-left: var(--border-left);
   }
   &__user {
-    --border-top: 15px solid #00bfb6;
+    --border-top: 15px solid var(--message-bg-color);
     --border-right: 15px solid transparent;
     --border-bottom: 15px solid transparent;
-    --border-left: 15px solid #00bfb6;
+    --border-left: 15px solid var(--message-bg-color);
     --right: -16px;
   }
   &__assistant {
-    --border-top: 15px solid #00bfb6;
-    --border-right: 15px solid #00bfb6;
+    --border-top: 15px solid var(--message-bg-color);
+    --border-right: 15px solid var(--message-bg-color);
     --border-bottom: 15px solid transparent;
     --border-left: 15px solid transparent;
     --left: -16px;
@@ -195,6 +190,25 @@ async function sendMessage() {
     bottom: 0;
     right: 12px;
     font-size: 10px;
+  }
+}
+.footer {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  gap: 12px;
+  padding-right: 12px;
+  & textarea {
+    width: 100%;
+    height: 120px;
+    resize: none;
+  }
+  &__actions {
+    height: fit-content;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
   }
 }
 </style>
