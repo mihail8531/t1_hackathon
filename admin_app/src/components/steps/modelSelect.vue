@@ -21,7 +21,7 @@
       <label>base URL </label>
     </FloatLabel>
 
-    <Button @click="submit" :disabled="!APIkey" label="Сохранить" icon="pi pi-save" />
+    <Button @click="submit" :disabled="!APIkey || modelValue" label="Сохранить" icon="pi pi-save" />
   </div>
 </template>
 
@@ -33,7 +33,7 @@ import InputText from 'primevue/inputtext';
 import Button from 'primevue/button';
 import { useToast } from 'primevue/usetoast';
 
-import { RAGService } from '@/services';
+import { RAGServiceFork } from '@/services';
 
 defineProps<{ modelValue: boolean }>();
 const emit = defineEmits<{ 'update:modelValue': [value: boolean] }>();
@@ -44,7 +44,7 @@ const APIkey = ref('');
 const baseUrl = ref('');
 
 async function submit() {
-  const { success, data } = await RAGService.setAPIKey(
+  const { success, data } = await RAGServiceFork.setAPIKey(
     baseUrl.value
       ? { llm_factory: 'OpenAI', api_key: APIkey.value, base_url: baseUrl.value }
       : { llm_factory: 'OpenAI', api_key: APIkey.value }

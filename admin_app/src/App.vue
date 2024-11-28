@@ -2,7 +2,7 @@
   <BaseLayout>
     <!-- <RootPage /> -->
 
-    <Stepper v-if="!loading" :value="2" style="width: 75vw" linear>
+    <Stepper v-if="!loading" v-model:value="curStep" style="width: 75vw" linear>
       <StepList>
         <Step v-for="step in list" :key="step.step" :value="step.step">{{ step.title }}</Step>
       </StepList>
@@ -23,7 +23,7 @@
               rgba(0, 0, 0, 0.23) 0px 6px 6px;
           "
         >
-          <component v-model="panel.done" :is="panel.component" />
+          <component v-if="curStep === panel.step" v-model="panel.done" :is="panel.component" :tokens />
 
           <div style="width: 100%; display: flex; margin-top: auto">
             <Button
@@ -63,29 +63,34 @@ import Button from 'primevue/button';
 import Toast from 'primevue/toast';
 
 import BaseLayout from './components/layouts/base.vue';
-// import RootPage from './pages/root.vue';
 import modelSelect from './components/steps/modelSelect.vue';
 import modelConfig from './components/steps/modelConfig.vue';
-import { authService, RAGService } from './services';
+import knowledgeBase from './components/steps/knowledgeBase.vue';
+import setAssistant from './components/steps/setAssistant.vue';
+import customization from './components/steps/customization.vue';
+import { authService, RAGServiceOrigin, RAGServiceFork } from './services';
+import type { GetTokensResponse } from './services/authService/@types';
 
+const curStep = ref(4);
 const list = ref([
   { step: 1, done: false, title: 'Выбор модели', component: modelSelect },
   { step: 2, done: false, title: 'Настройка модели', component: modelConfig },
-  { step: 3, done: false, title: 'Подключение базы знаний', component: null },
-  { step: 4, done: false, title: 'Выбор асистента', component: null }
+  { step: 3, done: true, title: 'Настройка базы знаний', component: knowledgeBase },
+  { step: 4, done: false, title: 'Выбор асистента', component: setAssistant },
+  { step: 5, done: false, title: 'Кастомизация', component: customization }
 ]);
 
 const loading = ref(true);
+const tokens = ref<GetTokensResponse | null>(null);
 
 onMounted(async () => {
-  // const {success, data} = await authService.getTokens()
+  const { success, data } = await authService.getTokens();
 
-  const data = {
-    api_key: 'ragflow-FiMDUwODVlYWQzMTExZWZiYTRlMDI0Mm',
-    auth_key: 'ImFhZmQyMmUyYWQzMTExZWZhYzg5MDI0MmFjMTIwMDA2Ig.Z0fXVg.kqwh6utVGVOcxIzrhurtcRYgHRw'
-  };
-
-  RAGService.setHeader('Authorization', data.auth_key);
+  if (success) {
+    RAGServiceFork.setHeader('Authorization', data.auth_key);
+    RAGServiceOrigin.setHeader('Authorization', 'Bearer ' + data.api_key);
+    tokens.value = data;
+  }
 
   loading.value = false;
 });

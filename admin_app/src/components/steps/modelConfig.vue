@@ -27,7 +27,12 @@
       style="width: 420px"
     />
 
-    <Button @click="submit" :disabled="!LLMValue || !EmbeddingValue" label="Сохранить" icon="pi pi-save" />
+    <Button
+      @click="submit"
+      :disabled="!LLMValue || !EmbeddingValue || modelValue"
+      label="Сохранить"
+      icon="pi pi-save"
+    />
   </div>
 </template>
 
@@ -38,7 +43,7 @@ import Button from 'primevue/button';
 import Select from 'primevue/select';
 import { useToast } from 'primevue/usetoast';
 
-import { RAGService } from '@/services';
+import { RAGServiceFork } from '@/services';
 
 interface SelectOption {
   label: string;
@@ -59,7 +64,7 @@ const tenantInfo = ref<{ id: string; name: string } | null>(null);
 const loading = ref(true);
 
 onMounted(async () => {
-  const { success, data } = await RAGService.getAllModels();
+  const { success, data } = await RAGServiceFork.getAllModels();
 
   if (success) {
     for (const key in data.data) {
@@ -71,9 +76,9 @@ onMounted(async () => {
       });
     }
 
-    const res = await RAGService.getUserModels();
+    const res = await RAGServiceFork.getUserModels();
 
-    if (res.success) {
+    if (res.success && res.data.data) {
       tenantInfo.value = { id: res.data.data.tenant_id, name: res.data.data.name };
 
       const curLLMModel = LLMOptions.value.find(el => el.label === res.data?.data.llm_id);
@@ -90,7 +95,7 @@ onMounted(async () => {
 async function submit() {
   if (!tenantInfo.value || !LLMValue.value || !EmbeddingValue.value) return;
 
-  const { success, data } = await RAGService.setUserModels({
+  const { success, data } = await RAGServiceFork.setUserModels({
     tenant_id: tenantInfo.value.id,
     name: tenantInfo.value.name,
     llm_id: LLMValue.value.label,
@@ -104,12 +109,12 @@ async function submit() {
   console.log('Set models: ', success, data);
 
   toast.add({
-    severity: success ? 'success' : 'error',
-    summary: success ? 'Модели успешно добавлены!' : 'при добавлении моделей произошла ошибка!',
+    severity: success && data.data ? 'success' : 'error',
+    summary: success && data.data ? 'Модели успешно добавлены!' : 'при добавлении моделей произошла ошибка!',
     life: 3000
   });
 
-  //   if (success) emit('update:modelValue', true);
+  if (success) emit('update:modelValue', true);
 }
 </script>
 
