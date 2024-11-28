@@ -1,7 +1,5 @@
 import BaseService from '../baseService';
-import { GetAssistansResponse, SendMessagePayload, SendMessageResponse } from './@types';
-
-const headers = { Authorization: 'Bearer ragflow-IxODljYzgwYWNkZTExZWY4N2QyMDI0Mm' };
+import type { GetAssistansResponse, SendMessagePayload, SendMessageResponse } from './@types';
 
 export default class RAGService extends BaseService {
   constructor(proxy: string, version?: string) {
@@ -9,15 +7,12 @@ export default class RAGService extends BaseService {
   }
 
   public async getAssistans() {
-    const res = await this.request<GetAssistansResponse>('chats/', {
-      headers
-    });
+    const res = await this.request<GetAssistansResponse>('/chats');
     return res;
   }
 
   public async sendMessage(id: string, payload: SendMessagePayload) {
-    const res = await this.request<SendMessageResponse>(`chats/${id}/completions`, {
-      headers,
+    const res = await this.request<SendMessageResponse>(`/chats/${id}/completions`, {
       method: this.methods.POST,
       body: payload
     });

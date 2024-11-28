@@ -123,3 +123,12 @@ export interface DocAgg {
   doc_id: string;
   doc_name: string;
 }
+
+
+/*  */
+
+export interface GetWindowResponse {
+  id: number;
+  style: string;
+  assistant_id: string;
+}

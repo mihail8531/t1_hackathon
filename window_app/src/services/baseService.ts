@@ -27,7 +27,7 @@ type RequestOptions = Partial<{
 }>;
 
 export default abstract class BaseService {
-  private readonly root;
+  private headers: Record<string, string> = {};
   private readonly proxy;
   private readonly version;
   protected readonly methods;
@@ -36,8 +36,6 @@ export default abstract class BaseService {
     this.proxy = api;
     this.version = version;
     this.methods = HTTPMethods;
-
-    this.root = import.meta.url.replace(/^(.*:\d*)(.*)/, '$1');
   }
 
   protected async request<T>(path: string, options: RequestOptions = {}): Promise<IResponse<T | null>> {
@@ -79,6 +77,7 @@ export default abstract class BaseService {
       })();
 
       const headers: Record<string, string> = {
+        ...this.headers,
         ...options.headers
       };
 
@@ -141,5 +140,13 @@ export default abstract class BaseService {
         message: err instanceof Error ? err.message : 'Неизвестная ошибка'
       } as IResponse<null>;
     }
+  }
+
+  public setHeader(key: string, value: string) {
+    this.headers[key] = value;
+  }
+
+  public removeHeader(key: string) {
+    if (key in this.headers) delete this.headers[key];
   }
 }

@@ -54,7 +54,7 @@ import Textarea from 'primevue/textarea';
 
 import chatImage from '@/assets/img/chat.png';
 
-import { RAGService } from './services';
+import { authService, RAGService } from './services';
 
 const text = ref('');
 const messages = ref<{ id: string; text: string; time: Date; role: 'user' | 'assistant' }[]>([]);
@@ -68,23 +68,39 @@ const style = ref<CSSProperties>({
   '--chat-bg-color': '#ffffff'
 });
 
+// 3
+
 const showPreview = ref(true);
 const loading = ref(false);
 
 onMounted(init);
 
 async function init() {
-  const { success, data } = await RAGService.getAssistans();
+  const windowResponse = await authService.getWindow(3);
 
-  if (!success) return;
+  if (windowResponse.success) {
+    const rawStyle = JSON.parse(windowResponse.data.style);
+    for (const key in rawStyle) {
+      /* @ts-ignore */
+      style.value['--' + key] = '#' + rawStyle[key];
+    }
 
-  assistant_id.value = data.data[0].id;
-  messages.value.push({
-    id: Math.random().toString(36).slice(2),
-    text: data.data[0].prompt.opener,
-    time: new Date(),
-    role: 'assistant'
-  });
+    const tokensResponse = await authService.getTokens();
+    if (tokensResponse.success) RAGService.setHeader('Authorization', 'Bearer ' + tokensResponse.data.api_key);
+
+    const { success, data } = await RAGService.getAssistans();
+    if (!success) return;
+
+    assistant_id.value = windowResponse.data.assistant_id;
+    messages.value.push({
+      id: Math.random().toString(36).slice(2),
+      text:
+        data.data.find(el => el.id === windowResponse.data.assistant_id)?.prompt.opener ??
+        'Приветствую! Я вертуальный асистент и помогу найти ответы на любые Ваши вопросы :)',
+      time: new Date(),
+      role: 'assistant'
+    });
+  }
 }
 
 async function sendMessage() {
@@ -92,6 +108,9 @@ async function sendMessage() {
 
   loading.value = true;
   messages.value.push({ id: Math.random().toString(36).slice(2), text: text.value, time: new Date(), role: 'user' });
+
+  await nextTick();
+  if (list.value) list.value.scrollTo({ top: list.value.scrollHeight, behavior: 'smooth' });
 
   const { success, data } = await RAGService.sendMessage(
     assistant_id.value,
