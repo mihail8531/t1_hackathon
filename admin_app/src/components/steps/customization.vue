@@ -10,7 +10,7 @@
       gap: 12px;
     "
   >
-    <h1>Кастомизация часа с асистентом</h1>
+    <h1>Кастомизация чата с асистентом (id {{ window_id }})</h1>
     <div style="display: flex; flex-direction: column; gap: 24px">
       <div v-for="item in style" :key="item.title" style="display: flex; gap: 24px; align-items: center">
         <FloatLabel variant="on">
@@ -53,6 +53,7 @@ const style = ref<{ title: string; field: string; value: string }[]>([
 ]);
 
 const toast = useToast();
+const window_id = localStorage.getItem('window_id');
 
 const loading = ref(true);
 
