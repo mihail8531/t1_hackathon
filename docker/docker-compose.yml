@@ -59,6 +59,28 @@ services:
       - .env
     network_mode: "host"
     restart: always
+  window_app:
+    build:
+      context: ../window_app
+    depends_on:
+      admin_backend:
+        condition: service_started
+    network_mode: "host"
+    env_file:
+      - .env
+    #ports:
+    #  - 5173:5173
+  admin_app:
+    build:
+      context: ../admin_app
+    depends_on:
+      admin_backend:
+        condition: service_started
+    network_mode: "host"
+    env_file:
+      - .env
+    #ports:
+    #  - 5174:5173
 volumes:
   postgres-db-volume:
 
