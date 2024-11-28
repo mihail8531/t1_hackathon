@@ -17,4 +17,9 @@ export default class AuthService extends BaseService {
     const res = await this.request<GetWindowResponse>('/assistant_window/' + id);
     return res;
   }
+
+  public async getAllWindows() {
+    const res = await this.request<GetWindowResponse[]>('/assistant_window/');
+    return res;
+  }
 }

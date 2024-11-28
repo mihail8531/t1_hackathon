@@ -19,12 +19,17 @@ const showPreview = ref(true);
 const loading = ref(false);
 onMounted(init);
 async function init() {
-    const windowResponse = await authService.getWindow(3);
+    const res = await fetch('http://127.0.0.1:9101/api/v1/assistant_window/');
+    const json = await res.json();
+    const id = json?.at(-1)?.id ?? 1;
+    const windowResponse = await authService.getWindow(id);
     if (windowResponse.success) {
-        const rawStyle = JSON.parse(windowResponse.data.style);
-        for (const key in rawStyle) {
-            /* @ts-ignore */
-            style.value['--' + key] = '#' + rawStyle[key];
+        if (windowResponse.data.style) {
+            const rawStyle = JSON.parse(windowResponse.data.style);
+            for (const key in rawStyle) {
+                /* @ts-ignore */
+                style.value['--' + key] = '#' + rawStyle[key];
+            }
         }
         const tokensResponse = await authService.getTokens();
         if (tokensResponse.success)
