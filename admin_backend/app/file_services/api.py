@@ -112,6 +112,10 @@ async def upload_new_files(
     flow = RAGFlow(
         api_key=rag_settings.RAGFLOW_API_KEY, base_url=rag_settings.ragflow_base_url
     )
+    if len(files) > 20:
+        await app_logger.error(f"{__name__}: too much files for batch loading")
+        return JSONResponse({"error": 400}, http.HTTPStatus.BAD_REQUEST)
+
     _data = []
     for file in files:
         extension = get_extension(file.filename or "")
@@ -169,8 +173,8 @@ async def get_files(
         api_key=rag_settings.RAGFLOW_API_KEY, base_url=rag_settings.ragflow_base_url
     )
 
-    if dataset_id == "" or limit <= 0 or offset < 0:
-        app_logger.error(f"{__name__}: no dataset id")
+    if dataset_id == "" or (limit <= 0 or limit > 100) or offset < 0:
+        await app_logger.error(f"{__name__}: no dataset id")
         return JSONResponse({"error": 400}, status_code=http.HTTPStatus.BAD_REQUEST)
 
     try:
@@ -182,7 +186,7 @@ async def get_files(
         rsp = {"docs": docs_ids}
         return JSONResponse(rsp)
     except Exception as err:
-        app_logger.error(f"{__name__}: {err}")
+        await app_logger.error(f"{__name__}: {err}")
         return JSONResponse(
             {"error": 500}, status_code=http.HTTPStatus.INTERNAL_SERVER_ERROR
         )
