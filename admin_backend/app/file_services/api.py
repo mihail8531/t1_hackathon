@@ -112,6 +112,10 @@ async def upload_new_files(
     flow = RAGFlow(
         api_key=rag_settings.RAGFLOW_API_KEY, base_url=rag_settings.ragflow_base_url
     )
+    if len(files) > 20:
+        await app_logger.error(f"{__name__}: too much files for batch loading")
+        return JSONResponse({"error": 400}, http.HTTPStatus.BAD_REQUEST)
+
     _data = []
     for file in files:
         extension = get_extension(file.filename or "")
