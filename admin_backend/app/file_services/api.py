@@ -158,26 +158,31 @@ async def upload_new_files(
         )
 
 
-# @files_uploader.get("/files")
-# async def get_files(
-#     rag_settings: Annotated[Settings, Depends(get_settings)], dataset_id: str
-# ) -> JSONResponse:
-#     flow = RAGFlow(
-#         api_key=rag_settings.RAGFLOW_API_KEY, base_url=rag_settings.ragflow_base_url
-#     )
-#
-#     if dataset_id == "":
-#         app_logger.error(f"{__name__}: no dataset id")
-#         return JSONResponse({"error": 400}, status_code=http.HTTPStatus.BAD_REQUEST)
-#
-#     try:
-#         ds = flow.list_datasets(id=dataset_id)
-#         if len(ds) == 0:
-#             return JSONResponse([])
-#
-#         JSONResponse(rsp)
-#     except Exception as err:
-#         app_logger.error(f"{__name__}: {err}")
-#         return JSONResponse(
-#             {"error": 500}, status_code=http.HTTPStatus.INTERNAL_SERVER_ERROR
-#         )
+@files_uploader.get("/files")
+async def get_files(
+    rag_settings: Annotated[Settings, Depends(get_settings)],
+    dataset_id: str,
+    limit: int,
+    offset: int,
+) -> JSONResponse:
+    flow = RAGFlow(
+        api_key=rag_settings.RAGFLOW_API_KEY, base_url=rag_settings.ragflow_base_url
+    )
+
+    if dataset_id == "" or limit <= 0 or offset < 0:
+        app_logger.error(f"{__name__}: no dataset id")
+        return JSONResponse({"error": 400}, status_code=http.HTTPStatus.BAD_REQUEST)
+
+    try:
+        docs_ids = []
+        ds = flow.list_datasets(id=dataset_id)
+        docs = ds[0].list_documents(offset=offset, limit=limit)
+        for doc in docs:
+            docs_ids.append(doc.id)
+        rsp = {"docs": docs_ids}
+        return JSONResponse(rsp)
+    except Exception as err:
+        app_logger.error(f"{__name__}: {err}")
+        return JSONResponse(
+            {"error": 500}, status_code=http.HTTPStatus.INTERNAL_SERVER_ERROR
+        )
